@@ -1,0 +1,17 @@
+[
+  {
+    "sheetMap": {
+      "voyageNo": "2205N",
+      "vesselName": "SITC LIAONING",
+      "Tips": "验证方法：如果是整体称重法填1，如果是累加计算法填2"
+    },
+    "sheetList": [
+      {
+        "containerNo": "TRHU6960728",
+        "blNo": "SHA221601291",
+        "verificationMethod": "2",
+        "VGM": "2424.01"
+      }
+    ]
+  }
+]

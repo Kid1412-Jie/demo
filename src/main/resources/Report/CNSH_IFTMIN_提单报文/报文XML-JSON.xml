@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+                      xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+    <jb:bean beanId="ediData" class="org.apache.commons.collections4.map.HashedMap" createOnElement="/root">
+        <jb:wiring property="ediHead" beanIdRef="ediHead"/>
+        <jb:wiring property="ediBody" beanIdRef="mainBody"/>
+    </jb:bean>
+
+    <jb:bean beanId="mainBody" class="java.util.HashMap" createOnElement="/root">
+        <!--UNB-->
+        <jb:value property="syntaxIdentifierUNB" default="" decoder="String" data="#/UNB/S001/E0001"/>
+        <jb:value property="syntaxVersionNumberUNB" default="" decoder="String" data="#/UNB/S001/E0002"/>
+        <jb:value property="senderIdentificationUNB" default="" decoder="String" data="#/UNB/S002/E0004"/>
+        <jb:value property="partnerIdentificationCodeQualifierUNBS002" default="" decoder="String" data="#/UNB/S002/E0007"/>
+        <jb:value property="recipientIdentificationUNB" default="" decoder="String" data="#/UNB/S003/E0010"/>
+        <jb:value property="partnerIdentificationCodeQualifierUNBS003" default="" decoder="String" data="#/UNB/S003/E0007"/>
+        <jb:value property="dateOfPreparationUNB" default="" decoder="String" data="#/UNB/S004/E0017"/>
+        <jb:value property="timeOfPreparationUNB" default="" decoder="String" data="#/UNB/S004/E0019"/>
+        <jb:value property="interchangeControlReferenceUNB" default="" decoder="String" data="#/UNB/S0020"/>
+        <!--报错添加-->
+        <jb:value property="interchangeControlReferenceUNB2" default="" decoder="String" data="#/UNB/S0021"/>
+        <!--报错添加-->
+        <jb:value property="interchangeControlReferenceUNB3" default="" decoder="String" data="#/UNB/S0022"/>
+
+        <!--UNH-->
+        <jb:value property="messageReferenceNumberUNH" default="" decoder="String" data="#/UNH/S0062"/>
+        <jb:value property="messageTypeIdentifierUNH" default="" decoder="String" data="#/UNH/S009/E0065"/>
+        <jb:value property="messageTypeVersionNumberUNH" default="" decoder="String" data="#/UNH/S009/E0052"/>
+        <jb:value property="messageTypeReleaseNumberUNH" default="" decoder="String" data="#/UNH/S009/E0054"/>
+        <jb:value property="controllingAgencyUNH" default="" decoder="String" data="#/UNH/S009/E0051"/>
+        <jb:value property="associationAssignedCodeUNH" default="" decoder="String" data="#/UNH/S009/E0057"/>
+        <jb:value property="0110UNH" default="" decoder="String" data="#/UNH/S009/E0110"/>
+        <jb:value property="0113UNH" default="" decoder="String" data="#/UNH/S009/E0113"/>
+        <jb:value property="commonAccessReferenceUNH" default="" decoder="String" data="#/UNH/S0068"/>
+        <jb:value property="sequenceMessageTransferNumberUNH" default="" decoder="String" data="#/UNH/S010/E0070"/>
+        <jb:value property="firstLastSequenceMessageTransferIndicationUNH" default="" decoder="String" data="#/UNH/S010/E0073"/>
+
+        <!--BGM-->
+        <jb:value property="documentNameCodeBGM" default="" decoder="String" data="#/BGM/C002/E1001"/>
+        <jb:value property="documentMessageNumberBGM" default="" decoder="String" data="#/BGM/C106/E1004"/>
+        <jb:value property="messageFunctionCodeBGM" default="" decoder="String" data="#/BGM/C1225"/>
+
+        <!--TSR-->
+        <jb:value property="contractAndCarriageConditionCodeTSR" default="" decoder="String" data="#/TSR/C536/E4065"/>
+        <jb:value property="serviceRequirementCodeTSR" default="" decoder="String" data="#/TSR/C233/E7273"/>
+
+        <!--FTX-->
+        <jb:wiring property="array_FTX" beanIdRef="array_root_freeText"/>
+
+        <!--CNT-->
+        <jb:wiring property="array_CNT" beanIdRef="array_root_controlTotal"/>
+
+        <!--group 1-->
+        <jb:wiring property="group_1" beanIdRef="array_group_1"/>
+
+        <!--group 3-->
+        <jb:wiring property="group_3" beanIdRef="array_group_3"/>
+
+        <!--group 6-->
+        <jb:wiring property="group_6" beanIdRef="array_group_6"/>
+
+        <!--group 8-->
+        <jb:wiring property="group_8" beanIdRef="array_group_8"/>
+
+        <!--group 11-->
+        <jb:wiring property="group_11" beanIdRef="array_group_11"/>
+
+        <!--group_18-->
+        <jb:wiring property="group_18" beanIdRef="array_group_18"/>
+
+        <!--group_37-->
+        <jb:wiring property="group_37" beanIdRef="array_group_37"/>
+
+        <!--UNT-->
+        <jb:value property="numberOfSegmentsInAMessageUNT" default="" decoder="String" data="#/UNT/C0074"/>
+        <jb:value property="messageReferenceNumberUNT" default="" decoder="String" data="#/UNT/C0062"/>
+
+        <!--UNZ-->
+        <jb:value property="interchangeControlCountUNZ" default="" decoder="String" data="#/UNZ/C0036"/>
+        <jb:value property="interchangeControlReferenceUNZ" default="" decoder="String" data="#/UNZ/C0020"/>
+    </jb:bean>
+
+    <!-- root/FTX -->
+    <jb:bean beanId="array_root_freeText" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_root_freeText" />
+    </jb:bean>
+    <jb:bean beanId="item_root_freeText" class="java.util.HashMap" createOnElement="/root/FTX">
+        <jb:value property="textSubjectCodeQualifierFTX" default="" decoder="String" data="#/C4451"/>
+        <jb:value property="textFunctionCodedFTX" default="" decoder="String" data="#/C4453"/>
+        <jb:value property="freeTextValueCodeFTX" default="" decoder="String" data="#/C107/E4441"/>
+        <!-- root~FTX~C108 -->
+        <jb:wiring property="array_freeTextValue" beanIdRef="array_root_FTX_freeTextValue"/>
+    </jb:bean>
+
+    <!-- root/FTX/C108/E4440 -->
+    <jb:bean beanId="array_root_FTX_freeTextValue" class="java.util.ArrayList" createOnElement="/root/FTX/C108">
+        <jb:wiring beanIdRef="item_root_FTX_freeTextValue" />
+    </jb:bean>
+    <jb:bean beanId="item_root_FTX_freeTextValue" class="java.util.HashMap" createOnElement="/root/FTX/C108/E4440">
+        <jb:value property="freeTextValueFTX" default="" decoder="String" data="#/"/>
+    </jb:bean>
+
+    <!-- root/CNT -->
+    <jb:bean beanId="array_root_controlTotal" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_root_controlTotal" />
+    </jb:bean>
+    <jb:bean beanId="item_root_controlTotal" class="java.util.HashMap" createOnElement="/root/CNT">
+        <jb:value property="controlTotalTypeCodeQualifierCNT" default="" decoder="String" data="#/C270/E6069"/>
+        <jb:value property="controlValueCNT" default="" decoder="String" data="#/C270/E6066"/>
+        <jb:value property="measurementUnitCodeCNT" default="" decoder="String" data="#/C270/E6411"/>
+    </jb:bean>
+
+    <!-- root/group_1 -->
+    <jb:bean beanId="array_group_1" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_1" />
+    </jb:bean>
+    <jb:bean beanId="item_group_1" class="java.util.HashMap" createOnElement="/root/group_1">
+        <!--root/group_1/LOC-->
+        <jb:wiring property="array_group_1_LOC" beanIdRef="array_group_1_LOC"/>
+
+        <!--root/group_1/DTM-->
+        <jb:wiring property="array_group_1_DTM" beanIdRef="array_group_1_DTM"/>
+    </jb:bean>
+
+    <!-- root/group_1/LOC -->
+    <jb:bean beanId="array_group_1_LOC" class="java.util.ArrayList" createOnElement="/root/group_1">
+        <jb:wiring beanIdRef="item_group_1_LOC" />
+    </jb:bean>
+    <jb:bean beanId="item_group_1_LOC" class="java.util.HashMap" createOnElement="/root/group_1/LOC">
+        <jb:value property="locationFunctionCodeQualifierLOC" default="" decoder="String" data="#/C3227"/>
+        <jb:value property="locationNameCodeLOC" default="" decoder="String" data="#/C517/E3225"/>
+        <jb:value property="codeListIdentificationCodeLOC" default="" decoder="String" data="#/C517/E1131"/>
+        <jb:value property="codeListResponsibleAgencyCodeLOC" default="" decoder="String" data="#/C517/E3055"/>
+        <jb:value property="locationNameLOC" default="" decoder="String" data="#/C517/E3224"/>
+    </jb:bean>
+
+    <!-- root/group_1/DTM -->
+    <jb:bean beanId="array_group_1_DTM" class="java.util.ArrayList" createOnElement="/root/group_1">
+        <jb:wiring beanIdRef="item_group_1_DTM" />
+    </jb:bean>
+    <jb:bean beanId="item_group_1_DTM" class="java.util.HashMap" createOnElement="/root/group_1/DTM">
+        <jb:value property="dateTimePeriodFunctionCodeQualifierDTM" default="" decoder="String" data="#/C507/E2005"/>
+        <jb:value property="dateTimePeriodValueDTM" default="" decoder="String" data="#/C507/E2380"/>
+        <jb:value property="dateTimePeriodFormatCodeDTM" default="" decoder="String" data="#/C507/E2379"/>
+    </jb:bean>
+
+    <!-- root/group_3 -->
+    <jb:bean beanId="array_group_3" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_3" />
+    </jb:bean>
+    <jb:bean beanId="item_group_3" class="java.util.HashMap" createOnElement="/root/group_3">
+        <!--RFF-->
+        <jb:value property="referenceFunctionCodeQualifierRFF" default="" decoder="String" data="#/RFF/C506/E1153"/>
+        <jb:value property="referenceIdentifierRFF" default="" decoder="String" data="#/RFF/C506/E1154"/>
+    </jb:bean>
+
+    <!-- root/group_6 -->
+    <jb:bean beanId="array_group_6" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_6" />
+    </jb:bean>
+    <jb:bean beanId="item_group_6" class="java.util.HashMap" createOnElement="/root/group_6/CPI">
+        <jb:value property="chargeCategoryCodeCPI" default="" decoder="String" data="#/C229/E5237"/>
+        <jb:value property="methodOfPaymentCPI" default="" decoder="String" data="#/C231"/>
+        <jb:value property="prepaidCollectIndicatorCodedCPI" default="" decoder="String" data="#/C4237"/>
+    </jb:bean>
+
+    <!-- root/group 8 -->
+    <jb:bean beanId="array_group_8" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_8" />
+    </jb:bean>
+    <jb:bean beanId="item_group_8" class="java.util.HashMap" createOnElement="/root/group_8">
+        <!--TDT-->
+        <jb:value property="transportStageCodeQualifierTDT" default="" decoder="String" data="#/TDT/C8051"/>
+        <jb:value property="conveyanceReferenceNumberTDT" default="" decoder="String" data="#/TDT/C8028"/>
+        <jb:value property="transportModeNameCodeTDT" default="" decoder="String" data="#/TDT/C220/E8067"/>
+        <jb:value property="transportMeansTDT" default="" decoder="String" data="#/TDT/C228"/>
+        <jb:value property="carrierIdentificationTDT" default="" decoder="String" data="#/TDT/C040/E3127"/>
+        <jb:value property="codeListIdentificationCodeTDTC040" default="" decoder="String" data="#/TDT/C040/E1131"/>
+        <jb:value property="transitDirectionIndicatorCodeTDT" default="" decoder="String" data="#/TDT/C8101"/>
+        <jb:value property="excessTransportationInformationTDT" default="" decoder="String" data="#/TDT/C401"/>
+        <jb:value property="transportMeansIdentificationNameIdentifierTDT" default="" decoder="String" data="#/TDT/C222/E8213"/>
+        <jb:value property="codeListIdentificationCodeTDTC222" default="" decoder="String" data="#/TDT/C222/E1131"/>
+        <jb:value property="codeListResponsibleAgencyCodeTDT" default="" decoder="String" data="#/TDT/C222/E3055"/>
+        <jb:value property="transportMeansIdentificationNameTDT" default="" decoder="String" data="#/TDT/C222/E8212"/>
+
+        <!--group 9-->
+        <jb:wiring property="group_9" beanIdRef="array_group_9"/>
+    </jb:bean>
+
+    <!-- root/group_8/group_9 -->
+    <jb:bean beanId="array_group_9" class="java.util.ArrayList" createOnElement="/root/group_8">
+        <jb:wiring beanIdRef="item_group_9" />
+    </jb:bean>
+    <jb:bean beanId="item_group_9" class="java.util.HashMap" createOnElement="/root/group_8/group_9">
+        <!--LOC-->
+        <jb:value property="locationFunctionCodeQualifierLOC" default="" decoder="String" data="#/LOC/C3227"/>
+        <jb:value property="locationNameCodeLOC" default="" decoder="String" data="#/LOC/C517/E3225"/>
+        <jb:value property="codeListIdentificationCodeLOC" default="" decoder="String" data="#/LOC/C517/E1131"/>
+        <jb:value property="codeListResponsibleAgencyCodeLOC" default="" decoder="String" data="#/LOC/C517/E3055"/>
+        <jb:value property="locationNameLOC" default="" decoder="String" data="#/LOC/C517/E3224"/>
+    </jb:bean>
+
+    <!-- root~group 11 -->
+    <jb:bean beanId="array_group_11" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_11" />
+    </jb:bean>
+    <jb:bean beanId="item_group_11" class="java.util.HashMap" createOnElement="/root/group_11">
+        <jb:value property="partyFunctionCodeQualifierNAD" default="" decoder="String" data="#/NAD/C3035"/>
+        <jb:value property="partyIdentifierNAD" default="" decoder="String" data="#/NAD/C082/E3039"/>
+        <!--报错添加-->
+        <jb:value property="partyIdentifierNAD2" default="" decoder="String" data="#/NAD/C082/E3040"/>
+        <!--报错添加-->
+        <jb:value property="partyIdentifierNAD3" default="" decoder="String" data="#/NAD/C082/E3041"/>
+        <jb:value property="nameAndAddressNAD" default="" decoder="String" data="#/NAD/C058"/>
+        <jb:value property="partyNameNAD" default="" decoder="String" data="#/NAD/C080/E3036"/>
+        <!---root/group_11/NAD/C059/E3042-->
+        <jb:wiring property="array_street" beanIdRef="array_group_11_street"/>
+        <jb:value property="cityNameNAD" default="" decoder="String" data="#/NAD/C3164"/>
+        <jb:value property="countrySubEntityNameCodeNAD" default="" decoder="String" data="#/NAD/C819/E3229"/>
+        <jb:value property="postalIdentificationCodeNAD" default="" decoder="String" data="#/NAD/C3251"/>
+        <jb:value property="countryNameCodeNAD" default="" decoder="String" data="#/NAD/C3207"/>
+
+        <!--group 12-->
+        <jb:wiring property="group_12" beanIdRef="array_group_12"/>
+
+        <!--group 13-->
+        <jb:wiring property="group_13" beanIdRef="array_group_13"/>
+
+        <!--group 15-->
+        <jb:wiring property="group_15" beanIdRef="array_group_15"/>
+    </jb:bean>
+
+    <!---root/group_11/NAD/C059/E3042-->
+    <jb:bean beanId="array_group_11_street" class="java.util.ArrayList" createOnElement="/root/group_11/NAD/C059">
+        <jb:wiring beanIdRef="item_group_11_street" />
+    </jb:bean>
+    <jb:bean beanId="item_group_11_street" class="java.util.HashMap" createOnElement="/root/group_11/NAD/C059/E3042">
+        <jb:value property="streetAndNumberPoBoxNAD" default="" decoder="String" data="#/"/>
+
+    </jb:bean>
+
+    <!-- root/group_11/group_12 -->
+    <jb:bean beanId="array_group_12" class="java.util.ArrayList" createOnElement="/root/group_11">
+        <jb:wiring beanIdRef="item_group_12" />
+    </jb:bean>
+    <jb:bean beanId="item_group_12" class="java.util.HashMap" createOnElement="/root/group_11/group_12">
+        <!--CTA-->
+        <jb:value property="contactFunctionCodeCTA" default="" decoder="String" data="#/CTA/C3139"/>
+        <jb:value property="departmentOrEmployeeIdentificationCTA" default="" decoder="String" data="#/CTA/C056/E3413"/>
+        <jb:value property="departmentOrEmployeeCTA" default="" decoder="String" data="#/CTA/C056/E3412"/>
+
+        <!--root/group_11/group_12/COM-->
+        <jb:wiring property="array_group_12_COM" beanIdRef="array_group_12_COM"/>
+    </jb:bean>
+
+    <!-- root/group_11/group_12/COM -->
+    <jb:bean beanId="array_group_12_COM" class="java.util.ArrayList" createOnElement="/root/group_11/group_12">
+        <jb:wiring beanIdRef="item_group_12_COM" />
+    </jb:bean>
+    <jb:bean beanId="item_group_12_COM" class="java.util.HashMap" createOnElement="/root/group_11/group_12/COM">
+        <jb:value property="communicationNumberCOM" default="" decoder="String" data="#/C076/E3148"/>
+        <jb:value property="communicationNumberCodeQualifierCOM" default="" decoder="String" data="#/C076/E3155"/>
+    </jb:bean>
+
+    <!-- root/group_11/group_13 -->
+    <jb:bean beanId="array_group_13" class="java.util.ArrayList" createOnElement="/root/group_11">
+        <jb:wiring beanIdRef="item_group_13" />
+    </jb:bean>
+    <jb:bean beanId="item_group_13" class="java.util.HashMap" createOnElement="/root/group_11/group_13">
+        <!--DOC-->
+        <jb:value property="documentNameCodeDOC" default="" decoder="String" data="#/DOC/C002/E1001"/>
+        <jb:value property="documentMessageNumberDOC" default="" decoder="String" data="#/DOC/C503/E1004"/>
+        <jb:value property="documentStatusCodeDOC" default="" decoder="String" data="#/DOC/C503/E1373"/>
+        <jb:value property="communicationMediumTypeCodeDOC" default="" decoder="String" data="#/DOC/C3153"/>
+        <jb:value property="numberOfCopiesOfDocumentRequiredDOC" default="" decoder="String" data="#/DOC/C1220"/>
+    </jb:bean>
+
+    <!-- root/group_11/group_15 -->
+    <jb:bean beanId="array_group_15" class="java.util.ArrayList" createOnElement="/root/group_11">
+        <jb:wiring beanIdRef="item_group_15" />
+    </jb:bean>
+    <jb:bean beanId="item_group_15" class="java.util.HashMap" createOnElement="/root/group_11/group_15">
+        <!--RFF-->
+        <jb:value property="referenceFunctionCodeQualifierRFF" default="" decoder="String" data="#/RFF/C506/E1153"/>
+        <jb:value property="referenceIdentifierRFF" default="" decoder="String" data="#/RFF/C506/E1154"/>
+    </jb:bean>
+
+    <!-- root-group_18 -->
+    <jb:bean beanId="array_group_18" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_18" />
+    </jb:bean>
+    <jb:bean beanId="item_group_18" class="java.util.HashMap" createOnElement="/root/group_18">
+        <!--GID-->
+        <jb:value property="goodsItemNumberGID" default="" decoder="String" data="#/GID/C1496"/>
+        <jb:value property="numberOfPackagesGID" default="" decoder="String" data="#/GID/C213/E7224"/>
+        <jb:value property="packageTypeDescriptionCodeGID" default="" decoder="String" data="#/GID/C213/E7065"/>
+
+        <!--PIA-->
+        <jb:wiring property="group_FTX" beanIdRef="array_group_18_PIA"/>
+
+        <!--group_18~FTX-->
+        <jb:wiring property="group_FTX" beanIdRef="array_group_18_FTX"/>
+
+        <!--group_20-->
+        <jb:wiring property="group_20" beanIdRef="array_group_20"/>
+
+        <!--group_21-->
+        <jb:wiring property="group_21" beanIdRef="array_group_21"/>
+
+        <!--group_22-->
+        <jb:wiring property="group_22" beanIdRef="array_group_22"/>
+
+        <!--group_23-->
+        <jb:wiring property="group_23" beanIdRef="array_group_23"/>
+
+        <!--group_29-->
+        <jb:wiring property="group_29" beanIdRef="array_group_29"/>
+
+        <!--group_32-->
+        <jb:wiring property="group_32" beanIdRef="array_group_32"/>
+    </jb:bean>
+
+    <!-- root/group_18/PIA -->
+    <jb:bean beanId="array_group_18_PIA" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_18_PIA" />
+    </jb:bean>
+    <jb:bean beanId="item_group_18_FTX" class="java.util.HashMap" createOnElement="/root/group_18/PIA">
+        <jb:value property="productIdFunctionQualifierPIA" default="" decoder="String" data="#/C4347"/>
+        <jb:value property="itemNumberPIA" default="" decoder="String" data="#/C212/E7140"/>
+        <jb:value property="itemTypeIdentificationCodePIA" default="" decoder="String" data="#/C212/E7143"/>
+    </jb:bean>
+
+    <!-- group_18~FTX -->
+    <jb:bean beanId="array_group_18_FTX" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_18_FTX" />
+    </jb:bean>
+    <jb:bean beanId="item_group_18_FTX" class="java.util.HashMap" createOnElement="/root/group_18/FTX">
+        <jb:value property="textSubjectCodeQualifier" default="" decoder="String" data="#/C4451"/>
+        <jb:value property="textFunctionCoded" default="" decoder="String" data="#/C4453"/>
+        <jb:value property="textReference" default="" decoder="String" data="#/C107"/>
+        <jb:value property="freeTextValue" default="" decoder="String" data="#/C108/E4440"/>
+    </jb:bean>
+
+    <!-- root-group_20 -->
+    <jb:bean beanId="array_group_20" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_20" />
+    </jb:bean>
+    <jb:bean beanId="item_group_20" class="java.util.HashMap" createOnElement="/root/group_18/group_20">
+        <!--MEA-->
+        <jb:value property="measurementAttributeCodeMEA" default="" decoder="String" data="#/MEA/C6311"/>
+        <jb:value property="measuredAttributeCodeMEA" default="" decoder="String" data="#/MEA/C502/E6313"/>
+        <jb:value property="measurementUnitCodeMEA" default="" decoder="String" data="#/MEA/C174/E6411"/>
+        <jb:value property="measurementValueMEA" default="" decoder="String" data="#/MEA/C174/E6314"/>
+    </jb:bean>
+
+    <!-- root-group_21 -->
+    <jb:bean beanId="array_group_21" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_21" />
+    </jb:bean>
+    <jb:bean beanId="item_group_21" class="java.util.HashMap" createOnElement="/root/group_18/group_21">
+        <!--DIM-->
+        <jb:value property="dimensionQualifierDIM" default="" decoder="String" data="#/DIM/C6145"/>
+        <jb:value property="measurementUnitCodeDIM" default="" decoder="String" data="#/DIM/C211/E6411"/>
+        <jb:value property="lengthDimensionDIM" default="" decoder="String" data="#/DIM/C211/E6168"/>
+        <jb:value property="widthDimensionDIM" default="" decoder="String" data="#/DIM/C211/E6140"/>
+        <jb:value property="heightDimensionDIM" default="" decoder="String" data="#/DIM/C211/E6008"/>
+    </jb:bean>
+
+    <!-- root-group_22 -->
+    <jb:bean beanId="array_group_22" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_22" />
+    </jb:bean>
+    <jb:bean beanId="item_group_22" class="java.util.HashMap" createOnElement="/root/group_18/group_22">
+        <!--RFF-->
+        <jb:value property="referenceFunctionCodeQualifierRFF" default="" decoder="String" data="#/RFF/C506/E1153"/>
+        <jb:value property="referenceIdentifierRFF" default="" decoder="String" data="#/RFF/C506/E1154"/>
+        <jb:value property="lineNumberRFF" default="" decoder="String" data="#/RFF/C506/E1156"/>
+    </jb:bean>
+
+    <!-- root-group_23 -->
+    <jb:bean beanId="array_group_23" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_23" />
+    </jb:bean>
+    <jb:bean beanId="item_group_23" class="java.util.HashMap" createOnElement="/root/group_18/group_23">
+        <!--PCI-->
+        <jb:value property="markingInstructionsCodedPCI" default="" decoder="String" data="#/PCI/C4233"/>
+        <jb:value property="shippingMarksPCI" default="" decoder="String" data="#/PCI/C210/E7102"/>
+    </jb:bean>
+
+    <!-- root-group_29 -->
+    <jb:bean beanId="array_group_29" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_29" />
+    </jb:bean>
+    <jb:bean beanId="item_group_29" class="java.util.HashMap" createOnElement="/root/group_18/group_29">
+        <!--SGP-->
+        <jb:value property="equipmentIdentificationNumberPCI" default="" decoder="String" data="#/SGP/C237/E8260"/>
+        <jb:value property="numberOfPackagesPCI" default="" decoder="String" data="#/SGP/C7224"/>
+
+        <!--group_30-->
+        <jb:wiring property="group_30" beanIdRef="array_group_30"/>
+    </jb:bean>
+
+    <!-- root-group_30 -->
+    <jb:bean beanId="array_group_30" class="java.util.ArrayList" createOnElement="/root/group_18/group_29">
+        <jb:wiring beanIdRef="item_group_30" />
+    </jb:bean>
+    <jb:bean beanId="item_group_30" class="java.util.HashMap" createOnElement="/root/group_18/group_29/group_30">
+        <!--MEA-->
+        <jb:value property="measurementAttributeCodeMEA" default="" decoder="String" data="#/MEA/C6311"/>
+        <jb:value property="measuredAttributeCodeMEA" default="" decoder="String" data="#/MEA/C502/E6313"/>
+        <jb:value property="measurementUnitCodeMEA" default="" decoder="String" data="#/MEA/C174/E6411"/>
+        <jb:value property="measurementValueMEA" default="" decoder="String" data="#/MEA/C174/E6314"/>
+    </jb:bean>
+
+    <!-- root-group_32 -->
+    <jb:bean beanId="array_group_32" class="java.util.ArrayList" createOnElement="/root/group_18">
+        <jb:wiring beanIdRef="item_group_32" />
+    </jb:bean>
+    <jb:bean beanId="item_group_32" class="java.util.HashMap" createOnElement="/root/group_18/group_32">
+        <!--DGS-->
+        <jb:value property="dangerousGoodsRegulationsCodeDGS" default="" decoder="String" data="#/DGS/C8273"/>
+        <jb:value property="hazardCodeIdentificationDGS" default="" decoder="String" data="#/DGS/C205/E8351"/>
+        <jb:value property="hazardSubstanceItemPageNumberDGS" default="" decoder="String" data="#/DGS/C205/E8078"/>
+        <jb:value property="hazardCodeVersionNumberDGS" default="" decoder="String" data="#/DGS/C205/E8092"/>
+        <jb:value property="UNDGNumberDGS" default="" decoder="String" data="#/DGS/C234/E7124"/>
+        <jb:value property="dangerousGoodsFlashpointDGS" default="" decoder="String" data="#/DGS/C234/E7088"/>
+        <jb:value property="shipmentFlashpointDGS" default="" decoder="String" data="#/DGS/C223/E7106"/>
+        <jb:value property="measurementUnitCodeDGS" default="" decoder="String" data="#/DGS/C223/E6411"/>
+        <jb:value property="packingGroupCodedDGS" default="" decoder="String" data="#/DGS/C8339"/>
+        <jb:value property="emsNumberDGS" default="" decoder="String" data="#/DGS/C8364"/>
+        <jb:value property="MFAGDGS" default="" decoder="String" data="#/DGS/C8410"/>
+        <jb:value property="tremCardNumberDGS" default="" decoder="String" data="#/DGS/C8126"/>
+        <jb:value property="hazardIdentificationNumberUpperPartDGS" default="" decoder="String" data="#/DGS/C235/E8158"/>
+        <jb:value property="substanceIdentificationNumberLowerPartDGS" default="" decoder="String" data="#/DGS/C235/E8186"/>
+        <!--root/group_18/group_32/DGS/C236/E8246-->
+        <jb:wiring property="array_dangerousGoodsLabel" beanIdRef="array_dangerousGoodsLabel"/>
+
+        <!--FIX-->
+        <jb:wiring property="array_FIX" beanIdRef="array_group_32_FTX"/>
+
+        <!--group_33-->
+        <jb:wiring property="group_33" beanIdRef="array_group_33"/>
+    </jb:bean>
+
+    <!--root/group_18/group_32/DGS/C236/E8246-->
+    <jb:bean beanId="array_dangerousGoodsLabel" class="java.util.ArrayList" createOnElement="/root/group_18/group_32/DGS/C236">
+        <jb:wiring beanIdRef="item_dangerousGoodsLabel" />
+    </jb:bean>
+    <jb:bean beanId="item_dangerousGoodsLabel" class="java.util.HashMap" createOnElement="/root/group_18/group_32/DGS/C236/E8246">
+        <jb:value property="dangerousGoodsLabelMarkingDGS" default="" decoder="String" data="#/"/>
+    </jb:bean>
+
+    <!-- root/group_18/group_32/FIX -->
+    <jb:bean beanId="array_group_32_FTX" class="java.util.ArrayList" createOnElement="/root/group_18/group_32">
+        <jb:wiring beanIdRef="item_group_32_FTX" />
+    </jb:bean>
+    <jb:bean beanId="item_group_32_FTX" class="java.util.HashMap" createOnElement="/root/group_18/group_32/FIX">
+        <jb:value property="textSubjectCodeQualifierFTX" default="" decoder="String" data="#/C4451"/>
+        <jb:value property="textFunctionCodedFTX" default="" decoder="String" data="#/C4453"/>
+        <jb:value property="textReferenceFTX" default="" decoder="String" data="#/C107"/>
+        <!--root/group_18/group_32/FTX/C108/E4440-->
+        <jb:wiring property="array_textLiteral" beanIdRef="array_textLiteral"/>
+    </jb:bean>
+
+    <!--root/group_18/group_32/FTX/C108/E4440-->
+    <jb:bean beanId="array_textLiteral" class="java.util.ArrayList" createOnElement="/root/group_18/group_32/FTX/C108">
+        <jb:wiring beanIdRef="item_textLiteral" />
+    </jb:bean>
+    <jb:bean beanId="item_textLiteral" class="java.util.HashMap" createOnElement="/root/group_18/group_32/FTX/C108/E4440">
+        <jb:value property="freeTextValueFTX" default="" decoder="String" data="#/"/>
+    </jb:bean>
+
+    <!-- root/group_18~group_32~group_33-->
+    <jb:bean beanId="array_group_33" class="java.util.ArrayList" createOnElement="/root/group_18/group_32">
+        <jb:wiring beanIdRef="item_group_33" />
+    </jb:bean>
+    <jb:bean beanId="item_group_33" class="java.util.HashMap" createOnElement="/root/group_18/group_32/group_33">
+        <!--CTA-->
+        <jb:value property="contactFunctionCodeCTA" default="" decoder="String" data="#/CTA/C3139"/>
+        <jb:value property="departmentOrEmployeeIdentificationCTA" default="" decoder="String" data="#/CTA/C056/E3413"/>
+        <jb:value property="departmentOrEmployeeCTA" default="" decoder="String" data="#/CTA/C056/E3412"/>
+
+        <!--root/group_18/group_32/group_33/COM-->
+        <jb:wiring property="array_group_12_COM" beanIdRef="array_group_33_COM"/>
+    </jb:bean>
+
+    <!--root/group_18/group_32/group_33/COM-->
+    <jb:bean beanId="array_group_33_COM" class="java.util.ArrayList" createOnElement="/root/group_18/group_32/group_33">
+        <jb:wiring beanIdRef="item_group_33_COM" />
+    </jb:bean>
+    <jb:bean beanId="item_group_33_COM" class="java.util.HashMap" createOnElement="/root/group_18/group_32/group_33/COM">
+        <jb:value property="communicationNumberCOM" default="" decoder="String" data="#/C076/E3148"/>
+        <jb:value property="communicationNumberCodeQualifierCOM" default="" decoder="String" data="#/C076/E3155"/>
+    </jb:bean>
+
+    <!-- root/group_37 -->
+    <jb:bean beanId="array_group_37" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_37" />
+    </jb:bean>
+    <jb:bean beanId="item_group_37" class="java.util.HashMap" createOnElement="/root/group_37">
+        <!--EQD-->
+        <jb:value property="equipmentTypeCodeQualifierEQD" default="" decoder="String" data="#/EQD/C8053"/>
+        <jb:value property="equipmentIdentificationNumberEQD" default="" decoder="String" data="#/EQD/C237/E8260"/>
+        <jb:value property="equipmentSizeAndTypeDescriptionCodeEQD" default="" decoder="String" data="#/EQD/C224/E8155"/>
+        <jb:value property="equipmentSupplierCodedEQD" default="" decoder="String" data="#/EQD/C8077"/>
+
+        <!--MEA-->
+        <jb:wiring property="array_MEA" beanIdRef="array_group_37_MEA"/>
+
+        <!--SEL-->
+        <jb:wiring property="array_SEL" beanIdRef="array_group_37_SEL"/>
+
+        <!--TMP-->
+        <jb:value property="temperatureQualifier" default="" decoder="String" data="#/TMP/C6245"/>
+        <jb:value property="temperatureSetting" default="" decoder="String" data="#/TMP/C239/E6246"/>
+        <jb:value property="measurementUnitCode" default="" decoder="String" data="#/TMP/C239/E6411"/>
+
+        <!--RFF-->
+        <jb:wiring property="array_RFF" beanIdRef="array_group_37_RFF"/>
+
+        <!--group_39-->
+        <jb:wiring property="group_39" beanIdRef="array_group_39"/>
+    </jb:bean>
+
+    <!--root/group_37/MEA-->
+    <jb:bean beanId="array_group_37_MEA" class="java.util.ArrayList" createOnElement="/root/group_37">
+        <jb:wiring beanIdRef="item_group_37_MEA" />
+    </jb:bean>
+    <jb:bean beanId="item_group_37_MEA" class="java.util.HashMap" createOnElement="/root/group_37/MEA">
+        <jb:value property="measurementAttributeCodeMEA" default="" decoder="String" data="#/C6311"/>
+        <jb:value property="measuredAttributeCodeMEA" default="" decoder="String" data="#/C502/E6313"/>
+        <jb:value property="measurementUnitCodeMEA" default="" decoder="String" data="#/C174/E6411"/>
+        <jb:value property="measurementValueMEA" default="" decoder="String" data="#/C174/E6314"/>
+    </jb:bean>
+
+    <!--root/group_37/SEL-->
+    <jb:bean beanId="array_group_37_SEL" class="java.util.ArrayList" createOnElement="/root/group_37">
+        <jb:wiring beanIdRef="item_group_37_SEL" />
+    </jb:bean>
+    <jb:bean beanId="item_group_37_SEL" class="java.util.HashMap" createOnElement="/root/group_37/SEL">
+        <jb:value property="sealNumberSEL" default="" decoder="String" data="#/C9308"/>
+        <jb:value property="sealingPartyCodedSEL" default="" decoder="String" data="#/C215/E9303"/>
+    </jb:bean>
+
+    <!--root/group_37/RFF-->
+    <jb:bean beanId="array_group_37_RFF" class="java.util.ArrayList" createOnElement="/root/group_37">
+        <jb:wiring beanIdRef="item_group_37_RFF" />
+    </jb:bean>
+    <jb:bean beanId="item_group_37_RFF" class="java.util.HashMap" createOnElement="/root/group_37/RFF">
+        <jb:value property="referenceFunctionCodeQualifierRFF" default="" decoder="String" data="#/C506/E1153"/>
+        <jb:value property="referenceIdentifierRFF" default="" decoder="String" data="#/C506/E1154"/>
+    </jb:bean>
+
+    <!--root/group_37/group_39-->
+    <jb:bean beanId="array_group_39" class="java.util.ArrayList" createOnElement="/root/group_37">
+        <jb:wiring beanIdRef="item_group_39" />
+    </jb:bean>
+    <jb:bean beanId="item_group_39" class="java.util.HashMap" createOnElement="/root/group_37/group_39">
+        <!--NAD-->
+        <jb:value property="partyFunctionCodeQualifierNAD" default="" decoder="String" data="#/C3035"/>
+        <jb:value property="partyIdentifierNAD" default="" decoder="String" data="#/C082/E3039"/>
+        <!--报错添加-->
+        <jb:value property="partyIdentifierNAD2" default="" decoder="String" data="#/C082/E3040"/>
+        <!--报错添加-->
+        <jb:value property="partyIdentifierNAD3" default="" decoder="String" data="#/C082/E3041"/>
+        <jb:value property="nameAndAddressNAD" default="" decoder="String" data="#/C058"/>
+        <jb:value property="partyNameNAD" default="" decoder="String" data="#/C080/E3036"/>
+        <!---root/group 39/NAD/C059/E3042-->
+        <jb:wiring property="array_street" beanIdRef="array_group_39_street"/>
+        <jb:value property="cityNameNAD" default="" decoder="String" data="#/C3164"/>
+        <jb:value property="countrySubEntityNameCodeNAD" default="" decoder="String" data="#/C819/E3229"/>
+        <jb:value property="postalIdentificationCodeNAD" default="" decoder="String" data="#/C3251"/>
+        <jb:value property="countryNameCodeNAD" default="" decoder="String" data="#/C3207"/>
+
+        <!--group_40-->
+        <jb:wiring property="group_40" beanIdRef="array_group_40"/>
+    </jb:bean>
+
+    <!---root/group_39/NAD/C059/E3042-->
+    <jb:bean beanId="array_group_39_street" class="java.util.ArrayList" createOnElement="/root/group_37/group_39/NAD/C059">
+        <jb:wiring beanIdRef="item_group_39_street" />
+    </jb:bean>
+    <jb:bean beanId="item_group_39_street" class="java.util.HashMap" createOnElement="/root/group_37/group_39/C059/E3042">
+        <jb:value property="streetAndNumberPoBoxNAD" default="" decoder="String" data="#/"/>
+
+    </jb:bean>
+
+    <!--root/group_37/group_39/group_40-->
+    <jb:bean beanId="array_group_40" class="java.util.ArrayList" createOnElement="/root/group_37/group_39">
+        <jb:wiring beanIdRef="item_group_40" />
+    </jb:bean>
+    <jb:bean beanId="item_group_40" class="java.util.HashMap" createOnElement="/root/group_37/group_39/group_40">
+        <!--CTA-->
+        <jb:value property="contactFunctionCodeCTA" default="" decoder="String" data="#/CTA/C3139"/>
+        <jb:value property="departmentOrEmployeeIdentificationCTA" default="" decoder="String" data="#/CTA/C056/E3413"/>
+        <jb:value property="departmentOrEmployeeCTA" default="" decoder="String" data="#/CTA/C056/E3412"/>
+
+        <!--root/group_37/group_39/group_40/COM-->
+        <jb:wiring property="array_group_40_COM" beanIdRef="array_group_40_COM"/>
+    </jb:bean>
+
+    <!-- root/group_37/group_39/group_40/COM -->
+    <jb:bean beanId="array_group_40_COM" class="java.util.ArrayList" createOnElement="/root/group_37/group_39/group_40">
+        <jb:wiring beanIdRef="item_group_40_COM" />
+    </jb:bean>
+    <jb:bean beanId="item_group_40_COM" class="java.util.HashMap" createOnElement="/root/group_37/group_39/group_40/COM">
+        <jb:value property="communicationNumberCOM" default="" decoder="String" data="#/C076/E3148"/>
+        <jb:value property="communicationNumberCodeQualifierCOM" default="" decoder="String" data="#/C076/E3155"/>
+    </jb:bean>
+
+</smooks-resource-list>

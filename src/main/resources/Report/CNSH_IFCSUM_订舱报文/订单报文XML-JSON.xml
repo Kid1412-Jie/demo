@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+                      xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+    <jb:bean beanId="ediData" class="org.apache.commons.collections4.map.HashedMap" createOnElement="/root">
+        <jb:wiring property="ediHead" beanIdRef="ediHead"/>
+        <jb:wiring property="ediBody" beanIdRef="mainBody"/>
+    </jb:bean>
+
+    <jb:bean beanId="mainBody" class="java.util.HashMap" createOnElement="/root">
+        <!--00-->
+        <jb:value property="messageType" default="" decoder="String" data="#/S00/E0001"/>
+        <jb:value property="fileDescription" default="" decoder="String" data="#/S00/E0002"/>
+        <jb:value property="fileFunction" default="" decoder="String" data="#/S00/E0003"/>
+        <jb:value property="senderCode" default="" decoder="String" data="#/S00/E0004"/>
+        <jb:value property="receiverCode" default="" decoder="String" data="#/S00/E0005"/>
+        <jb:value property="fileCreateTime" default="" decoder="String" data="#/S00/E0006"/>
+
+        <!--group_10-->
+        <jb:wiring property="group_10" beanIdRef="array_group_10"/>
+
+        <!--99-->
+        <jb:value property="recordTotalOfFile " default="" decoder="String" data="#/S99/E9901"/>
+    </jb:bean>
+
+    <!--group_10-->
+    <jb:bean beanId="array_group_10" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_10" />
+    </jb:bean>
+    <jb:bean beanId="item_group_10" class="java.util.HashMap" createOnElement="/root/group_10">
+        <!--11-->
+        <jb:value property="vesselCode" default="" decoder="String" data="#/S10/E1001"/>
+        <jb:value property="vessel" default="" decoder="String" data="#/S10/E1002"/>
+        <jb:value property="nationalityCode" default="" decoder="String" data="#/S10/E1003"/>
+        <jb:value property="voyage" default="" decoder="String" data="#/S10/E1004"/>
+        <jb:value property="tradeCode" default="" decoder="String" data="#/S10/E1005"/>
+        <jb:value property="trade" default="" decoder="String" data="#/S10/E1006"/>
+        <jb:value property="etdArrivedDate" default="" decoder="String" data="#/S10/E1007"/>
+        <jb:value property="sailingDate" default="" decoder="String" data="#/S10/E1008"/>
+        <jb:value property="departPortCode" default="" decoder="String" data="#/S10/E1009"/>
+        <jb:value property="departPort" default="" decoder="String" data="#/S10/E1010"/>
+        <jb:value property="nextCallingPortCode" default="" decoder="String" data="#/S10/E1011"/>
+        <jb:value property="nextCallingPort" default="" decoder="String" data="#/S10/E1012"/>
+        <jb:value property="containerCount" default="" decoder="Long" data="#/S10/E1013"/>
+
+        <!--11-->
+        <jb:value property="shippingLineCode" default="" decoder="String" data="#/S11/E1101"/>
+        <jb:value property="shippingLine" default="" decoder="String" data="#/S11/E1102"/>
+
+        <!--12-->
+        <jb:value property="blNo" default="" decoder="String" data="#/S12/E1201"/>
+        <jb:value property="preVesselCode" default="" decoder="String" data="#/S12/E1202"/>
+        <jb:value property="preVessel" default="" decoder="String" data="#/S12/E1203"/>
+        <jb:value property="preVoyage" default="" decoder="String" data="#/S12/E1204"/>
+        <jb:value property="placeCodeOfReceipt" default="" decoder="String" data="#/S12/E1205"/>
+        <jb:value property="placeOfReceipt" default="" decoder="String" data="#/S12/E1206"/>
+        <jb:value property="loadPortCode" default="" decoder="String" data="#/S12/E1207"/>
+        <jb:value property="loadPort" default="" decoder="String" data="#/S12/E1208"/>
+        <jb:value property="blCyCfsItem" default="" decoder="String" data="#/S12/E1209"/>
+        <jb:value property="prepaidOrCollect" default="" decoder="String" data="#/S12/E1210"/>
+        <jb:value property="loadDate" default="" decoder="String" data="#/S12/E1211"/>
+        <jb:value property="quarantineCoding" default="" decoder="String" data="#/S12/E1212"/>
+        <jb:value property="dateOfIssue" default="" decoder="String" data="#/S12/E1213"/>
+        <jb:value property="currency" default="" decoder="String" data="#/S12/E1214"/>
+        <jb:value property="exchangeRate" default="" decoder="String" data="#/S12/E1215"/>
+        <jb:value property="contractNo" default="" decoder="String" data="#/S12/E1216"/>
+        <jb:value property="houseBl" default="" decoder="String" data="#/S12/E1217"/>
+
+        <!--13-->
+        <jb:value property="dischargePortCode" default="" decoder="String" data="#/S13/E1301"/>
+        <jb:value property="dischargePort" default="" decoder="String" data="#/S13/E1302"/>
+        <jb:value property="placeCodeOfDelivery" default="" decoder="String" data="#/S13/E1303"/>
+        <jb:value property="placeOfDelivery" default="" decoder="String" data="#/S13/E1304"/>
+        <jb:value property="transferPortCode" default="" decoder="String" data="#/S13/E1305"/>
+        <jb:value property="transferPort" default="" decoder="String" data="#/S13/E1306"/>
+        <jb:value property="placeCodeOfBlIssue" default="" decoder="String" data="#/S13/E1307"/>
+        <jb:value property="placeOfBlIssue" default="" decoder="String" data="#/S13/E1308"/>
+        <jb:value property="transferFlag" default="" decoder="String" data="#/S13/E1309"/>
+
+        <!--14-->
+        <jb:value property="optDischPort1Code" default="" decoder="String" data="#/S14/E1401"/>
+        <jb:value property="optDischPort1" default="" decoder="String" data="#/S14/E1402"/>
+        <jb:value property="optDischPort2Code" default="" decoder="String" data="#/S14/E1403"/>
+        <jb:value property="optDischPort2" default="" decoder="String" data="#/S14/E1404"/>
+        <jb:value property="optDischPort3Code" default="" decoder="String" data="#/S14/E1405"/>
+        <jb:value property="optDischPort3" default="" decoder="String" data="#/S14/E1406"/>
+        <jb:value property="optDischPort4Code" default="" decoder="String" data="#/S14/E1407"/>
+        <jb:value property="optDischPort4" default="" decoder="String" data="#/S14/E1408"/>
+        <jb:value property="optDischPort5Code" default="" decoder="String" data="#/S14/E1409"/>
+        <jb:value property="optDischPort5" default="" decoder="String" data="#/S14/E1410"/>
+
+        <!--group_15-->
+        <jb:wiring property="group_15" beanIdRef="array_group_15"/>
+
+        <!--16-->
+        <jb:value property="shipperCode" default="" decoder="String" data="#/S16/E1601"/>
+        <jb:value property="shipperCodeCustomCn" default="" decoder="String" data="#/S16/E1602"/>
+        <jb:value property="shipperAeoCodeCn" default="" decoder="String" data="#/S16/E1603"/>
+        <jb:value property="communicationNumberTeCustomCn16" default="" decoder="String" data="#/S16/E1604"/>
+        <jb:value property="shipper1" default="" decoder="String" data="#/S16/E1605"/>
+        <jb:value property="shipper2" default="" decoder="String" data="#/S16/E1606"/>
+        <jb:value property="shipper3" default="" decoder="String" data="#/S16/E1607"/>
+        <jb:value property="shipper4" default="" decoder="String" data="#/S16/E1608"/>
+        <jb:value property="shipper5" default="" decoder="String" data="#/S16/E1609"/>
+        <jb:value property="shipper6" default="" decoder="String" data="#/S16/E1610"/>
+        <jb:value property="shipper7" default="" decoder="String" data="#/S16/E1611"/>
+        <jb:value property="shipper8" default="" decoder="String" data="#/S16/E1612"/>
+
+        <!--17-->
+        <jb:value property="consigneeCode" default="" decoder="String" data="#/S17/E1701"/>
+        <jb:value property="consigneeCodeCustomCn" default="" decoder="String" data="#/S17/E1702"/>
+        <jb:value property="consigneeAeoCodeCn" default="" decoder="String" data="#/S17/E1703"/>
+        <jb:value property="communicationNumberTeCustomCn17" default="" decoder="String" data="#/S17/E1704"/>
+        <jb:value property="consignee1" default="" decoder="String" data="#/S17/E1705"/>
+        <jb:value property="consignee2" default="" decoder="String" data="#/S17/E1706"/>
+        <jb:value property="consignee3" default="" decoder="String" data="#/S17/E1707"/>
+        <jb:value property="consignee4" default="" decoder="String" data="#/S17/E1708"/>
+        <jb:value property="consignee5" default="" decoder="String" data="#/S17/E1709"/>
+        <jb:value property="consignee6" default="" decoder="String" data="#/S17/E1710"/>
+        <jb:value property="consignee7" default="" decoder="String" data="#/S17/E1711"/>
+        <jb:value property="consignee8" default="" decoder="String" data="#/S17/E1712"/>
+
+        <!--18-->
+        <jb:value property="notify1Code" default="" decoder="String" data="#/S18/E1801"/>
+        <jb:value property="notifyCodeCustomCn" default="" decoder="String" data="#/S18/E1802"/>
+        <jb:value property="communicationNumberTeCustomCn18" default="" decoder="String" data="#/S18/E1803"/>
+        <jb:value property="notify1" default="" decoder="String" data="#/S18/E1804"/>
+        <jb:value property="notify2" default="" decoder="String" data="#/S18/E1805"/>
+        <jb:value property="notify3" default="" decoder="String" data="#/S18/E1806"/>
+        <jb:value property="notify4" default="" decoder="String" data="#/S18/E1807"/>
+        <jb:value property="notify5" default="" decoder="String" data="#/S18/E1808"/>
+        <jb:value property="notify6" default="" decoder="String" data="#/S18/E1809"/>
+        <jb:value property="notify7" default="" decoder="String" data="#/S18/E1810"/>
+        <jb:value property="notify8" default="" decoder="String" data="#/S18/E1811"/>
+        <jb:value property="notify9" default="" decoder="String" data="#/S18/E1812"/>
+
+        <!--19-->
+        <jb:value property="notify2Code" default="" decoder="String" data="#/S19/E1901"/>
+        <jb:value property="notify2_1" default="" decoder="String" data="#/S19/E1902"/>
+        <jb:value property="notify2_2" default="" decoder="String" data="#/S19/E1903"/>
+        <jb:value property="notify2_3" default="" decoder="String" data="#/S19/E1904"/>
+        <jb:value property="notify2_4" default="" decoder="String" data="#/S19/E1905"/>
+        <jb:value property="notify2_5" default="" decoder="String" data="#/S19/E1906"/>
+        <jb:value property="notify2_6" default="" decoder="String" data="#/S19/E1907"/>
+        <jb:value property="notify2_7" default="" decoder="String" data="#/S19/E1908"/>
+
+        <!--20-->
+        <jb:value property="notify3Code" default="" decoder="String" data="#/S20/E2001"/>
+        <jb:value property="notify3_1" default="" decoder="String" data="#/S20/E2002"/>
+        <jb:value property="notify3_2" default="" decoder="String" data="#/S20/E2003"/>
+        <jb:value property="notify3_3" default="" decoder="String" data="#/S20/E2004"/>
+        <jb:value property="notify3_4" default="" decoder="String" data="#/S20/E2005"/>
+        <jb:value property="notify3_5" default="" decoder="String" data="#/S20/E2006"/>
+        <jb:value property="notify3_6" default="" decoder="String" data="#/S20/E2007"/>
+        <jb:value property="notify3_7" default="" decoder="String" data="#/S20/E2008"/>
+
+        <!--21-->
+        <jb:value property="containerHolder" default="" decoder="String" data="#/S21/E2101"/>
+        <jb:value property="notUsed1" default="" decoder="String" data="#/S21/E2102"/>
+        <jb:value property="notUsed2" default="" decoder="String" data="#/S21/E2103"/>
+        <jb:value property="notUsed3" default="" decoder="String" data="#/S21/E2104"/>
+        <jb:value property="originCode" default="" decoder="String" data="#/S21/E2105"/>
+        <jb:value property="placeOfShipment" default="" decoder="String" data="#/S21/E2106"/>
+        <jb:value property="shipmentNo" default="" decoder="String" data="#/S21/E2107"/>
+        <jb:value property="lclSign" default="" decoder="String" data="#/S21/E2108"/>
+        <jb:value property="masterConsignmentNo" default="" decoder="String" data="#/S21/E2109"/>
+
+        <!--31-->
+        <jb:value property="communicationNumberEm1" default="" decoder="String" data="#/S31/E3101"/>
+        <jb:value property="communicationNumberFx" default="" decoder="String" data="#/S31/E3102"/>
+        <jb:value property="communicationNumberEm2" default="" decoder="String" data="#/S31/E3103"/>
+        <jb:value property="communicationNumberFx_2" default="" decoder="String" data="#/S31/E3104"/>
+        <jb:value property="communicationNumberTe" default="" decoder="String" data="#/S31/E3105"/>
+        <jb:value property="communicationNumberEm3" default="" decoder="String" data="#/S31/E3106"/>
+
+        <!--group_41-->
+        <jb:wiring property="group_41" beanIdRef="array_group_41"/>
+
+        <!--group_51-->
+        <jb:wiring property="group_51" beanIdRef="array_group_51"/>
+
+        <!--group_52-->
+        <jb:wiring property="group_52" beanIdRef="array_group_52"/>
+    </jb:bean>
+
+    <!--group_15-->
+    <jb:bean beanId="array_group_15" class="java.util.ArrayList" createOnElement="/root/group_10">
+        <jb:wiring beanIdRef="item_group_15" />
+    </jb:bean>
+    <jb:bean beanId="item_group_15" class="java.util.HashMap" createOnElement="/root/group_10/group_15">
+        <jb:value property="frChCode" default="" decoder="String" data="#/S15/E1501"/>
+        <jb:value property="frChRemark" default="" decoder="String" data="#/S15/E1502"/>
+        <jb:value property="payableAtCode" default="" decoder="String" data="#/S15/E1503"/>
+        <jb:value property="payableAt" default="" decoder="String" data="#/S15/E1504"/>
+        <jb:value property="quantity" default="" decoder="String" data="#/S15/E1505"/>
+        <jb:value property="currency" default="" decoder="String" data="#/S15/E1506"/>
+        <jb:value property="rateOfFrCh" default="" decoder="String" data="#/S15/E1507"/>
+        <jb:value property="unitOfQuantity" default="" decoder="String" data="#/S15/E1508"/>
+        <jb:value property="amount" default="" decoder="String" data="#/S15/E1509"/>
+        <jb:value property="prepaidOrCollect" default="" decoder="String" data="#/S15/E1510"/>
+    </jb:bean>
+
+    <!--group_41-->
+    <jb:bean beanId="array_group_41" class="java.util.ArrayList" createOnElement="/root/group_10">
+        <jb:wiring beanIdRef="item_group_41" />
+    </jb:bean>
+    <jb:bean beanId="item_group_41" class="java.util.HashMap" createOnElement="/root/group_10/group_41">
+        <!--41-->
+        <jb:value property="cargoSequenceNo" default="" decoder="String" data="#/S41/E4101"/>
+        <jb:value property="cargoCode" default="" decoder="String" data="#/S41/E4102"/>
+        <jb:value property="numbersOfPackages" default="" decoder="String" data="#/S41/E4103"/>
+        <jb:value property="packagesKindCode" default="" decoder="String" data="#/S41/E4104"/>
+        <jb:value property="packagesKind" default="" decoder="String" data="#/S41/E4105"/>
+        <jb:value property="cargoGrossWeight" default="" decoder="String" data="#/S41/E4106"/>
+        <jb:value property="cargoNetWeight" default="" decoder="String" data="#/S41/E4107"/>
+        <jb:value property="cargoMeasurement" default="" decoder="String" data="#/S41/E4108"/>
+
+        <!--43-->
+        <jb:value property="class" default="" decoder="String" data="#/S43/E4301"/>
+        <jb:value property="page" default="" decoder="String" data="#/S43/E4302"/>
+        <jb:value property="undgNo" default="" decoder="String" data="#/S43/E4303"/>
+        <jb:value property="label" default="" decoder="String" data="#/S43/E4304"/>
+        <jb:value property="flashPoint" default="" decoder="String" data="#/S43/E4305"/>
+        <jb:value property="emsNo" default="" decoder="String" data="#/S43/E4306"/>
+        <jb:value property="mfagNo" default="" decoder="String" data="#/S43/E4307"/>
+        <jb:value property="emergencyContact" default="" decoder="String" data="#/S43/E4308"/>
+        <jb:value property="temperatureId" default="" decoder="String" data="#/S43/E4309"/>
+        <jb:value property="temperatureSetting" default="" decoder="String" data="#/S43/E4310"/>
+        <jb:value property="minTemperature" default="" decoder="String" data="#/S43/E4311"/>
+        <jb:value property="maxTemperature" default="" decoder="String" data="#/S43/E4312"/>
+
+        <!--44-->
+        <jb:value property="marks1" default="" decoder="String" data="#/S44/E4401"/>
+        <jb:value property="marks2" default="" decoder="String" data="#/S44/E4402"/>
+        <jb:value property="marks3" default="" decoder="String" data="#/S44/E4403"/>
+        <jb:value property="marks4" default="" decoder="String" data="#/S44/E4404"/>
+        <jb:value property="marks5" default="" decoder="String" data="#/S44/E4405"/>
+        <jb:value property="marks6" default="" decoder="String" data="#/S44/E4406"/>
+        <jb:value property="marks7" default="" decoder="String" data="#/S44/E4407"/>
+        <jb:value property="marks8" default="" decoder="String" data="#/S44/E4408"/>
+        <jb:value property="marks9" default="" decoder="String" data="#/S44/E4409"/>
+        <jb:value property="marks10" default="" decoder="String" data="#/S44/E4410"/>
+
+        <!--47-->
+        <jb:value property="cargoDescription1" default="" decoder="String" data="#/S47/E4701"/>
+        <jb:value property="cargoDescription2" default="" decoder="String" data="#/S47/E4702"/>
+        <jb:value property="cargoDescription3" default="" decoder="String" data="#/S47/E4703"/>
+        <jb:value property="cargoDescription4" default="" decoder="String" data="#/S47/E4704"/>
+        <jb:value property="cargoDescription5" default="" decoder="String" data="#/S47/E4705"/>
+    </jb:bean>
+
+    <!--group_51-->
+    <jb:bean beanId="array_group_51" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_51" />
+    </jb:bean>
+    <jb:bean beanId="item_group_51" class="java.util.HashMap" createOnElement="/root/group_10/group_51">
+        <!--51-->
+        <jb:value property="cargoSequenceNo" default="" decoder="String" data="#/S51/E5101"/>
+        <jb:value property="ctnNo" default="" decoder="String" data="#/S51/E5102"/>
+        <jb:value property="sealNo" default="" decoder="String" data="#/S51/E5103"/>
+        <jb:value property="ctnSizeType" default="" decoder="String" data="#/S51/E5104"/>
+        <jb:value property="ctnStatus" default="" decoder="String" data="#/S51/E5105"/>
+        <jb:value property="ctnNumbersOfPackages" default="" decoder="String" data="#/S51/E5106"/>
+        <jb:value property="netWeight" default="" decoder="String" data="#/S51/E5107"/>
+        <jb:value property="tareWeight" default="" decoder="String" data="#/S51/E5108"/>
+        <jb:value property="ctnCargoMeasurement" default="" decoder="String" data="#/S51/E5109"/>
+        <jb:value property="overLengthFront" default="" decoder="String" data="#/S51/E5110"/>
+        <jb:value property="overLengthBack" default="" decoder="String" data="#/S51/E5111"/>
+        <jb:value property="overWidthLeft" default="" decoder="String" data="#/S51/E5112"/>
+        <jb:value property="overWidthRight" default="" decoder="String" data="#/S51/E5113"/>
+        <jb:value property="overHeight" default="" decoder="String" data="#/S51/E5114"/>
+        <jb:value property="stowageLocation" default="" decoder="String" data="#/S51/E5115"/>
+
+    </jb:bean>
+
+    <!--group_52-->
+    <jb:bean beanId="array_group_52" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_group_52" />
+    </jb:bean>
+    <jb:bean beanId="item_group_52" class="java.util.HashMap" createOnElement="/root/group_10/group_52">
+        <!--52-->
+        <jb:value property="ctnSize" default="" decoder="String" data="#/S52/E5201"/>
+        <jb:value property="ctnType" default="" decoder="String" data="#/S52/E5202"/>
+        <jb:value property="soc" default="" decoder="String" data="#/S52/E5203"/>
+        <jb:value property="vipEmp" default="" decoder="String" data="#/S52/E5204"/>
+        <jb:value property="ctnQuantity" default="" decoder="String" data="#/S52/E5205"/>
+    </jb:bean>
+</smooks-resource-list>

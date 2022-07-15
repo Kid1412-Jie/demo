@@ -1,0 +1,305 @@
+{
+  "ediBody": {
+    "documentNameCodeBGM4": null,
+    "documentNameCodeBGM3": null,
+    "departmentOrEmployeeIdentificationCTA": null,
+    "documentNameCodeBGM2": null,
+    "array_DTM": [
+      {
+        "dateTimePeriodValueDTM": "20160822085702",
+        "dateTimePeriodFunctionCodeQualifierDTM": "318",
+        "dateTimePeriodFormatCodeDTM": "204"
+      }
+    ],
+    "messageReferenceNumberUNH": "107060100746",
+    "interchangeControlReferenceUNZ": "107060100746",
+    "dateOfPreparationUNB": "160822",
+    "recipientIdentificationUNB": "YOURID",
+    "group_7": {
+      "carrierIdentificationTDT": "SCAC",
+      "codeListIdentificationCodeTDTC222": "L",
+      "group_8": [
+        {
+          "relatedPlaceLocationOneIdentificationLOC": null,
+          "relatedPlaceLocationOneLOC": null,
+          "array_DTM": [
+            {
+              "dateTimePeriodValueDTM": "20160907",
+              "dateTimePeriodFunctionCodeQualifierDTM": "180",
+              "dateTimePeriodFormatCodeDTM": "102"
+            }
+          ],
+          "codeListResponsibleAgencyCodeLOC": null,
+          "placeLocationLOC": "SHEKOU",
+          "codeListIdentificationCodeLOCC519": null,
+          "codeListResponsibleAgencyCodedLOC": "6",
+          "locationNameCodeLOC": "CNSHK",
+          "placeLocationQualifierLOC": "88",
+          "codeListIdentificationCodeLOCC517": null
+        },
+        {
+          "relatedPlaceLocationOneIdentificationLOC": null,
+          "relatedPlaceLocationOneLOC": null,
+          "array_DTM": [
+            {
+              "dateTimePeriodValueDTM": "20160907",
+              "dateTimePeriodFunctionCodeQualifierDTM": "133",
+              "dateTimePeriodFormatCodeDTM": "102"
+            }
+          ],
+          "codeListResponsibleAgencyCodeLOC": null,
+          "placeLocationLOC": "SHEKOU",
+          "codeListIdentificationCodeLOCC519": null,
+          "codeListResponsibleAgencyCodedLOC": "6",
+          "locationNameCodeLOC": "CNSHK",
+          "placeLocationQualifierLOC": "9",
+          "codeListIdentificationCodeLOCC517": null
+        },
+        {
+          "relatedPlaceLocationOneIdentificationLOC": null,
+          "relatedPlaceLocationOneLOC": null,
+          "array_DTM": [],
+          "codeListResponsibleAgencyCodeLOC": null,
+          "placeLocationLOC": "NHAVA SHEVA",
+          "codeListIdentificationCodeLOCC519": null,
+          "codeListResponsibleAgencyCodedLOC": "6",
+          "locationNameCodeLOC": "INNSA",
+          "placeLocationQualifierLOC": "11",
+          "codeListIdentificationCodeLOCC517": null
+        },
+        {
+          "relatedPlaceLocationOneIdentificationLOC": null,
+          "relatedPlaceLocationOneLOC": null,
+          "array_DTM": [],
+          "codeListResponsibleAgencyCodeLOC": null,
+          "placeLocationLOC": "NHAVA SHEVA",
+          "codeListIdentificationCodeLOCC519": null,
+          "codeListResponsibleAgencyCodedLOC": "6",
+          "locationNameCodeLOC": "INNSA",
+          "placeLocationQualifierLOC": "7",
+          "codeListIdentificationCodeLOCC517": null
+        }
+      ],
+      "idofMeansOfTransportIdentificationTDT": "9300790",
+      "codeListIdentificationCodeTDTC040": null,
+      "transitDirectionIndicatorCodeTDT": null,
+      "codeListResponsibleAgencyCodeTDT": null,
+      "idOfTheMeansOfTransportTDT": "TESTT ASIA",
+      "transportMeansTDT": null,
+      "excessTransportationInformationTDT": null,
+      "conveyanceReferenceNumberTDT": "012E",
+      "transportStageCodeQualifierTDT": "20",
+      "modeOfTransportCodedTDT": "1",
+      "codeListResponsibleAgencyCodedTDT": "182"
+    },
+    "associationAssignedCodeUNH": null,
+    "messageFunctionCodeBGM": "9",
+    "group_16": [
+      {
+        "productIdFunctionQualifierPIA": null,
+        "array_FTX": [
+          {
+            "textFunctionCodedFTX": null,
+            "array_textLiteral": [
+              {
+                "freeTextValueFTX": "Apples"
+              }
+            ],
+            "textSubjectCodeQualifierFTX": "AAA",
+            "textReferenceFTX": null
+          }
+        ],
+        "goodsItemNumberGID": "1",
+        "group_19": [],
+        "numberOfPackagesGID": "100",
+        "typeOfPackagesIdentificationGID": "PK",
+        "group_18": [
+          {
+            "measurementDimensionCodedMEA": "G",
+            "measurementValueMEA": "10000",
+            "measureUnitQualifierMEA": "KGM",
+            "measurementApplicationQualifierMEA": "WT"
+          },
+          {
+            "measurementDimensionCodedMEA": "AAW",
+            "measurementValueMEA": "800",
+            "measureUnitQualifierMEA": "CBM",
+            "measurementApplicationQualifierMEA": "VOL"
+          }
+        ],
+        "itemNumberPIA": null,
+        "group_27": [],
+        "itemTypeIdentificationCodePIA": null
+      }
+    ],
+    "messageTypeVersionNumberUNH": "D",
+    "group_3": [
+      {
+        "referenceFunctionCodeQualifierRFF": "SI",
+        "referenceIdentifierRFF": "123456789"
+      },
+      {
+        "referenceFunctionCodeQualifierRFF": "ZZ",
+        "referenceIdentifierRFF": "CS6137963210"
+      }
+    ],
+    "messageTypeReleaseNumberUNH": "99B",
+    "documentNameCodeBGM": "CS-Integration",
+    "messageReferenceNumberUNT": "107060100746",
+    "messageTypeIdentifierUNH": "IFTMBF",
+    "contactFunctionCodeCTA": null,
+    "array_TSR": [
+      {
+        "contractAndCarriageConditionCodeTSR": "28"
+      }
+    ],
+    "interchangeControlCountUNZ": "1",
+    "departmentOrEmployeeCTA": null,
+    "syntaxIdentifierUNB": "UNOC",
+    "senderIdentificationUNB": "CARGOSMART",
+    "numberOfSegmentsInAMessageUNT": "32",
+    "commonAccessReferenceUNH": null,
+    "interchangeControlReferenceUNB": "107060100746",
+    "array_COM": [],
+    "array_FTX": [
+      {
+        "textFunctionCodedFTX": null,
+        "array_textLiteral": [
+          {
+            "freeTextValueFTX": "YOUR COMMENT ABOUT WHOLE BOOKING REQUEST"
+          }
+        ],
+        "textSubjectCodeQualifierFTX": "AAA",
+        "textReferenceFTX": null
+      }
+    ],
+    "group_10": [
+      {
+        "partyIdIdentifierNAD": "SCAC",
+        "partyQualifierNAD": "CA",
+        "nameAndAddressNAD": null,
+        "cityNameNAD": null,
+        "countrySubEntityIdentificationNAD": null,
+        "postalIdentificationNAD": null,
+        "codeListQualifierNAD": null,
+        "countryCodeNAD": null,
+        "group_11": []
+      },
+      {
+        "partyIdIdentifierNAD": null,
+        "partyQualifierNAD": "CZ",
+        "array_streetAndNumberPo": [
+          {
+            "streetAndNumberPoBoxNAD": "SHIPPER ADDRESS"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "ADDRESS"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "cityNameNAD": "SHENZHEN",
+        "countrySubEntityIdentificationNAD": null,
+        "postalIdentificationNAD": null,
+        "codeListQualifierNAD": null,
+        "array_partyName": [
+          {
+            "partyNameNAD": "SHIPPER NAME"
+          }
+        ],
+        "countryCodeNAD": "CN",
+        "group_11": []
+      },
+      {
+        "partyIdIdentifierNAD": "OFFICECODE",
+        "partyQualifierNAD": "BK",
+        "array_streetAndNumberPo": [
+          {
+            "streetAndNumberPoBoxNAD": "BOOKGINT PARTY ADDRESS"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "ADDRESS"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "cityNameNAD": "WINDSOR",
+        "countrySubEntityIdentificationNAD": null,
+        "postalIdentificationNAD": null,
+        "codeListQualifierNAD": null,
+        "array_partyName": [
+          {
+            "partyNameNAD": "BOOKGING PARTY NAME"
+          }
+        ],
+        "countryCodeNAD": "CA",
+        "group_11": [
+          {
+            "contactFunctionCodeCTA": "IC",
+            "departmentOrEmployeeDetailsCTA": null,
+            "departmentOrEmployeeCTA": "First Name, Last Name",
+            "array_COM": [
+              {
+                "communicationNumberCodeQualifierCOM": "TE",
+                "communicationNumberCOM": "1-514-12345678"
+              },
+              {
+                "communicationNumberCodeQualifierCOM": "EM",
+                "communicationNumberCOM": "youremail@email.com"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "group_32": [
+      {
+        "equipmentSupplierCodedEQD": "2",
+        "equipmentSizeAndTypeDescriptionCodeEQD": "22R0",
+        "temperatureQualifierTMP": "2",
+        "measurementUnitCodeTMP": "CEL",
+        "equipmentIdentificationNumberEQD": null,
+        "temperatureSettingTMP": "002",
+        "equipmentTypeCodeQualifierEQD": "CN",
+        "numberOfUnitsEQN": "1",
+        "group_33": [],
+        "handlingInstructionsCodedHAN": null,
+        "array_FTX": [
+          {
+            "textFunctionCodedFTX": null,
+            "freeTextValueFTX": null,
+            "textSubjectCodeQualifierFTX": "AEB",
+            "freeTextValueCodeFTX": "PRC"
+          }
+        ],
+        "array_MEA": [
+          {
+            "measurementValueMEA": "10000",
+            "measurementAttributeCodeMEA": "WT",
+            "measurementUnitCodMEA": "KGM",
+            "measuredAttributeCodeMEA": "G"
+          },
+          {
+            "measurementValueMEA": "90",
+            "measurementAttributeCodeMEA": "AAE",
+            "measurementUnitCodMEA": "PER",
+            "measuredAttributeCodeMEA": "AAO"
+          },
+          {
+            "measurementValueMEA": "20",
+            "measurementAttributeCodeMEA": "AAE",
+            "measurementUnitCodMEA": "CBM",
+            "measuredAttributeCodeMEA": "AAS"
+          }
+        ],
+        "movementTypeDescriptionCodeTMD": null
+      }
+    ],
+    "partnerIdentificationCodeQualifierUNBS002": "01",
+    "timeOfPreparationUNB": "0857",
+    "sequenceMessageTransferNumberUNH": null,
+    "partnerIdentificationCodeQualifierUNBS003": "01",
+    "syntaxVersionNumberUNB": "2",
+    "documentMessageNumberBGM": "CS6137963210",
+    "controllingAgencyUNH": "UN",
+    "firstLastSequenceMessageTransferIndicationUNH": null
+  }
+}

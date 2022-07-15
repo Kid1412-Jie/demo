@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medi:edimap xmlns:medi="http://www.milyn.org/schema/edi-message-mapping-1.6.xsd">
+<medi:description name="GENERATE" version="1.0"/>
+<medi:delimiters segment="'" field="+" component=":" sub-component="'" escape="?"/>
+<medi:segments xmltag="root">
+    <!--UNB-->
+    <medi:segment xmltag="UNB" segcode="UNB" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="S001" truncatable="true">
+            <medi:component xmltag="E0001"/>
+            <medi:component xmltag="E0002"/>
+        </medi:field>
+        <medi:field xmltag="S002" truncatable="true">
+            <medi:component xmltag="E0004"/>
+            <medi:component xmltag="E0007"/>
+        </medi:field>
+        <medi:field xmltag="S003" truncatable="true">
+            <medi:component xmltag="E0010"/>
+            <medi:component xmltag="E0007"/>
+        </medi:field>
+        <medi:field xmltag="S004" truncatable="true">
+            <medi:component xmltag="E0017"/>
+            <medi:component xmltag="E0019"/>
+        </medi:field>
+        <medi:field xmltag="S0020"/>
+    </medi:segment>
+
+    <!--UNH-->
+    <medi:segment xmltag="UNH" segcode="UNH" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="S0062"/>
+        <medi:field xmltag="S009" truncatable="true">
+            <medi:component xmltag="E0065"/>
+            <medi:component xmltag="E0052"/>
+            <medi:component xmltag="E0054"/>
+            <medi:component xmltag="E0051"/>
+            <medi:component xmltag="E0057"/>
+        </medi:field>
+        <medi:field xmltag="S0068"/>
+        <medi:field xmltag="S010" truncatable="true">
+            <medi:component xmltag="E0070"/>
+            <medi:component xmltag="E0073"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--BGM-->
+    <medi:segment xmltag="BGM" segcode="BGM" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="C002" truncatable="true">
+            <medi:component xmltag="E1001"/>
+            <!--报错添加-->
+            <medi:component xmltag="E1002"/>
+            <!--报错添加-->
+            <medi:component xmltag="E1003"/>
+            <!--报错添加-->
+            <medi:component xmltag="E1004"/>
+        </medi:field>
+        <medi:field xmltag="C106" truncatable="true">
+            <medi:component xmltag="E1004"/>
+        </medi:field>
+        <medi:field xmltag="C1225" />
+    </medi:segment>
+
+    <!--CTA-->
+    <medi:segment xmltag="CTA" segcode="CTA" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="C3139" />
+        <medi:field xmltag="C056" truncatable="true">
+            <medi:component xmltag="E3413"/>
+            <medi:component xmltag="E3412"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--COM-->
+    <medi:segment xmltag="COM" segcode="COM" truncatable="true" minOccurs="0" maxOccurs="9">
+        <medi:field xmltag="C076" truncatable="true">
+            <medi:component xmltag="E3148"/>
+            <medi:component xmltag="E3155"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--DTM-->
+    <medi:segment xmltag="DTM" segcode="DTM" truncatable="true" minOccurs="0" maxOccurs="9">
+        <medi:field xmltag="C507" truncatable="true">
+            <medi:component xmltag="E2005"/>
+            <medi:component xmltag="E2380"/>
+            <medi:component xmltag="E2379"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--TSR-->
+    <medi:segment xmltag="TSR" segcode="TSR" truncatable="true" minOccurs="0" maxOccurs="9">
+        <medi:field xmltag="C536" truncatable="true">
+            <medi:component xmltag="E4065"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--FTX-->
+    <medi:segment xmltag="FTX" segcode="FTX" truncatable="true" minOccurs="0" maxOccurs="99">
+        <medi:field xmltag="C4451" />
+        <medi:field xmltag="C4453" />
+        <medi:field xmltag="C107" />
+        <medi:field xmltag="C108" truncatable="true">
+            <medi:component xmltag="E4440"/>
+            <medi:component xmltag="E4440"/>
+            <medi:component xmltag="E4440"/>
+            <medi:component xmltag="E4440"/>
+            <medi:component xmltag="E4440"/>
+        </medi:field>
+    </medi:segment>
+
+    <!--Group 3-->
+    <medi:segmentGroup xmltag="group_3" minOccurs="0" maxOccurs="99">
+        <!--RFF-->
+        <medi:segment xmltag="RFF" segcode="RFF" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C506" truncatable="true">
+                <medi:component xmltag="E1153"/>
+                <medi:component xmltag="E1154"/>
+            </medi:field>
+        </medi:segment>
+    </medi:segmentGroup>
+
+
+    <!--Group 7-->
+    <medi:segmentGroup xmltag="group_7" minOccurs="0" maxOccurs="99">
+        <!--TDT-->
+        <medi:segment xmltag="TDT" segcode="TDT" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C8051" />
+            <medi:field xmltag="C8028" />
+            <medi:field xmltag="C220" truncatable="true">
+                <medi:component xmltag="E8067"/>
+            </medi:field>
+            <medi:field xmltag="C228" />
+            <medi:field xmltag="C040" truncatable="true">
+                <medi:component xmltag="E3127"/>
+                <medi:component xmltag="E1131"/>
+                <medi:component xmltag="E3055"/>
+            </medi:field>
+            <medi:field xmltag="C8101" />
+            <medi:field xmltag="C401" />
+            <medi:field xmltag="C222" truncatable="true">
+                <medi:component xmltag="E8213"/>
+                <medi:component xmltag="E1131"/>
+                <medi:component xmltag="E3055"/>
+                <medi:component xmltag="E8212"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--Group 8-->
+        <medi:segmentGroup xmltag="group_8" minOccurs="0" maxOccurs="99">
+            <!--LOC-->
+            <medi:segment xmltag="LOC" segcode="LOC" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C3227" />
+                <medi:field xmltag="C517" truncatable="true">
+                    <medi:component xmltag="E3225"/>
+                    <medi:component xmltag="E1131"/>
+                    <medi:component xmltag="E3055"/>
+                    <medi:component xmltag="E3224"/>
+                </medi:field>
+                <medi:field xmltag="C519" truncatable="true">
+                    <medi:component xmltag="E3223"/>
+                    <medi:component xmltag="E1131"/>
+                    <medi:component xmltag="E3055"/>
+                    <medi:component xmltag="E3222"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--DTM-->
+            <medi:segment xmltag="DTM" segcode="DTM" truncatable="true" minOccurs="0" maxOccurs="9">
+                <medi:field xmltag="C507" truncatable="true">
+                    <medi:component xmltag="E2005"/>
+                    <medi:component xmltag="E2380"/>
+                    <medi:component xmltag="E2379"/>
+                </medi:field>
+            </medi:segment>
+        </medi:segmentGroup>
+    </medi:segmentGroup>
+
+    <!--Group 10-->
+    <medi:segmentGroup xmltag="group_10" minOccurs="0" maxOccurs="99">
+        <!--NAD-->
+        <medi:segment xmltag="NAD" segcode="NAD" truncatable="true" minOccurs="0" maxOccurs="1"    >
+            <medi:field xmltag="C3035" />
+            <medi:field xmltag="C082" truncatable="true">
+                <medi:component xmltag="E3039"/>
+                <medi:component xmltag="E1131"/>
+            </medi:field>
+            <medi:field xmltag="C058" />
+            <medi:field xmltag="C080" truncatable="true">
+                <medi:component xmltag="E3036"/>
+                <medi:component xmltag="E3036"/>
+            </medi:field>
+            <medi:field xmltag="C059" truncatable="true">
+                <medi:component xmltag="E3042"/>
+                <medi:component xmltag="E3042"/>
+                <medi:component xmltag="E3042"/>
+            </medi:field>
+            <medi:field xmltag="C3164" />
+            <medi:field xmltag="C819" truncatable="true">
+                <medi:component xmltag="E3229"/>
+            </medi:field>
+            <medi:field xmltag="C3251" />
+            <medi:field xmltag="C3207" />
+        </medi:segment>
+
+        <!--Group 11-->
+        <medi:segmentGroup xmltag="group_11" minOccurs="0" maxOccurs="9">
+            <!--CTA-->
+            <medi:segment xmltag="CTA" segcode="CTA" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C3139" />
+                <medi:field xmltag="C056" truncatable="true">
+                    <medi:component xmltag="E3413"/>
+                    <medi:component xmltag="E3412"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--COM-->
+            <medi:segment xmltag="COM" segcode="COM" truncatable="true" minOccurs="0" maxOccurs="9">
+                <medi:field xmltag="C076" truncatable="true">
+                    <medi:component xmltag="E3148"/>
+                    <medi:component xmltag="E3155"/>
+                </medi:field>
+            </medi:segment>
+        </medi:segmentGroup>
+    </medi:segmentGroup>
+
+    <!--Group 16-->
+    <medi:segmentGroup xmltag="group_16" minOccurs="0" maxOccurs="999">
+        <!--GID-->
+        <medi:segment xmltag="GID" segcode="GID" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C1496" />
+            <medi:field xmltag="C213" truncatable="true">
+                <medi:component xmltag="E7224"/>
+                <medi:component xmltag="E7065"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--PIA-->
+        <medi:segment xmltag="PIA" segcode="PIA" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C4347" />
+            <medi:field xmltag="C212" truncatable="true">
+                <medi:component xmltag="E7140"/>
+                <medi:component xmltag="E7143"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--FTX-->
+        <medi:segment xmltag="FTX" segcode="FTX" truncatable="true" minOccurs="0" maxOccurs="9">
+            <medi:field xmltag="C4451" />
+            <medi:field xmltag="C4453" />
+            <medi:field xmltag="C107" />
+            <medi:field xmltag="C108" truncatable="true">
+                <medi:component xmltag="E4440"/>
+                <medi:component xmltag="E4440"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--Group 18-->
+        <medi:segmentGroup xmltag="group_18" minOccurs="0" maxOccurs="99">
+            <!--MEA-->
+            <medi:segment xmltag="MEA" segcode="MEA" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C6311" />
+                <medi:field xmltag="C502" truncatable="true">
+                    <medi:component xmltag="E6313"/>
+                </medi:field>
+                <medi:field xmltag="C174" truncatable="true">
+                    <medi:component xmltag="E6411"/>
+                    <medi:component xmltag="E6314"/>
+                </medi:field>
+            </medi:segment>
+        </medi:segmentGroup>
+
+        <!--Group 19-->
+        <medi:segmentGroup xmltag="group_19" minOccurs="0" maxOccurs="99">
+            <!--DIM-->
+            <medi:segment xmltag="DIM" segcode="DIM" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C6145" />
+                <medi:field xmltag="C211" truncatable="true">
+                    <medi:component xmltag="E6111"/>
+                    <medi:component xmltag="E6168"/>
+                    <medi:component xmltag="E6140"/>
+                    <medi:component xmltag="E6008"/>
+                </medi:field>
+            </medi:segment>
+        </medi:segmentGroup>
+
+        <!--Group 27-->
+        <medi:segmentGroup xmltag="group_27" minOccurs="0" maxOccurs="9">
+            <!--DGS-->
+            <medi:segment xmltag="DGS" segcode="DGS" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C8273" />
+                <medi:field xmltag="C205" truncatable="true">
+                    <medi:component xmltag="E8351"/>
+                    <medi:component xmltag="E8078"/>
+                </medi:field>
+                <medi:field xmltag="C234" truncatable="true">
+                    <medi:component xmltag="E7124"/>
+                </medi:field>
+                <medi:field xmltag="C223" truncatable="true">
+                    <medi:component xmltag="E7106"/>
+                    <medi:component xmltag="E6411"/>
+                </medi:field>
+                <medi:field xmltag="C8339" />
+                <medi:field xmltag="C8364" />
+                <medi:field xmltag="C8410" />
+                <medi:field xmltag="C8126" />
+                <medi:field xmltag="C235" truncatable="true">
+                    <medi:component xmltag="E8158"/>
+                    <medi:component xmltag="E8186"/>
+                </medi:field>
+                <medi:field xmltag="C236" truncatable="true">
+                    <medi:component xmltag="E8246"/>
+                    <medi:component xmltag="E8246"/>
+                    <medi:component xmltag="E8246"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--FTX-->
+            <medi:segment xmltag="FTX" segcode="FTX" truncatable="true" minOccurs="0" maxOccurs="99">
+                <medi:field xmltag="C4451" />
+                <medi:field xmltag="C4453" />
+                <medi:field xmltag="C107" />
+                <medi:field xmltag="C108" truncatable="true">
+                    <medi:component xmltag="E4440"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--Group 28-->
+            <medi:segmentGroup xmltag="group_28" minOccurs="0" maxOccurs="9">
+                <!--CTA-->
+                <medi:segment xmltag="CTA" segcode="CTA" truncatable="true" minOccurs="0" maxOccurs="1">
+                    <medi:field xmltag="C3139" />
+                    <medi:field xmltag="C056" truncatable="true">
+                        <medi:component xmltag="E3413"/>
+                        <medi:component xmltag="E3412"/>
+                    </medi:field>
+                </medi:segment>
+
+                <!--COM-->
+                <medi:segment xmltag="COM" segcode="COM" truncatable="true" minOccurs="0" maxOccurs="9">
+                    <medi:field xmltag="C076" truncatable="true">
+                        <medi:component xmltag="E3148"/>
+                        <medi:component xmltag="E3155"/>
+                    </medi:field>
+                </medi:segment>
+            </medi:segmentGroup>
+        </medi:segmentGroup>
+    </medi:segmentGroup>
+
+    <!--Group 32-->
+    <medi:segmentGroup xmltag="group_32" minOccurs="0" maxOccurs="-1">
+        <!--EQD-->
+        <medi:segment xmltag="EQD" segcode="EQD" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C8053" />
+            <medi:field xmltag="C237" truncatable="true">
+                <medi:component xmltag="E8260"/>
+            </medi:field>
+            <medi:field xmltag="C224" truncatable="true">
+                <medi:component xmltag="E8155"/>
+            </medi:field>
+            <medi:field xmltag="C8077" />
+        </medi:segment>
+
+        <!--EQN-->
+        <medi:segment xmltag="EQN" segcode="EQN" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C523" truncatable="true">
+                <medi:component xmltag="E6350"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--TMD-->
+        <medi:segment xmltag="TMD" segcode="TMD" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C219" truncatable="true">
+                <medi:component xmltag="E8335"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--MEA-->
+        <medi:segment xmltag="MEA" segcode="MEA" truncatable="true" minOccurs="0" maxOccurs="9">
+            <medi:field xmltag="C6311" />
+            <medi:field xmltag="C502" truncatable="true">
+                <medi:component xmltag="E6313"/>
+            </medi:field>
+            <medi:field xmltag="C174" truncatable="true">
+                <medi:component xmltag="E6411"/>
+                <medi:component xmltag="E6314"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--HAN-->
+        <medi:segment xmltag="HAN" segcode="HAN" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C524" truncatable="true">
+                <medi:component xmltag="E4079"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--TMP-->
+        <medi:segment xmltag="TMP" segcode="TMP" truncatable="true" minOccurs="0" maxOccurs="1">
+            <medi:field xmltag="C6245" />
+            <medi:field xmltag="C239" truncatable="true">
+                <medi:component xmltag="E6246"/>
+                <medi:component xmltag="E6411"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--FTX-->
+        <medi:segment xmltag="FTX" segcode="FTX" truncatable="true" minOccurs="0" maxOccurs="9">
+            <medi:field xmltag="C4451" />
+            <medi:field xmltag="C4453" />
+            <medi:field xmltag="C107" truncatable="true">
+                <medi:component xmltag="E4441"/>
+            </medi:field>
+            <medi:field xmltag="C108" truncatable="true">
+                <medi:component xmltag="E4440"/>
+            </medi:field>
+        </medi:segment>
+
+        <!--Group 33-->
+        <medi:segmentGroup xmltag="group_33" minOccurs="0" maxOccurs="9">
+            <!--NAD-->
+            <medi:segment xmltag="NAD" segcode="NAD" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C3035" />
+                <medi:field xmltag="C082" />
+                <medi:field xmltag="C058" />
+                <medi:field xmltag="C080" truncatable="true">
+                    <medi:component xmltag="E3036"/>
+                    <medi:component xmltag="E3036"/>
+                </medi:field>
+                <medi:field xmltag="C059" truncatable="true">
+                    <medi:component xmltag="E3042"/>
+                    <medi:component xmltag="E3042"/>
+                    <medi:component xmltag="E3042"/>
+                </medi:field>
+                <medi:field xmltag="C3164" />
+                <medi:field xmltag="C819" truncatable="true">
+                    <medi:component xmltag="E3229"/>
+                </medi:field>
+                <medi:field xmltag="C3251" />
+                <medi:field xmltag="C3207" />
+            </medi:segment>
+
+            <!--DTM-->
+            <medi:segment xmltag="DTM" segcode="DTM" truncatable="true" minOccurs="0" maxOccurs="1">
+                <medi:field xmltag="C507" truncatable="true">
+                    <medi:component xmltag="E2005"/>
+                    <medi:component xmltag="E2380"/>
+                    <medi:component xmltag="E2379"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--Group 34-->
+            <medi:segmentGroup xmltag="group_34" minOccurs="0" maxOccurs="9">
+                <!--CTA-->
+                <medi:segment xmltag="CTA" segcode="CTA" truncatable="true" minOccurs="0" maxOccurs="1">
+                    <medi:field xmltag="C3139" />
+                    <medi:field xmltag="C056" truncatable="true">
+                        <medi:component xmltag="E3413"/>
+                        <medi:component xmltag="E3412"/>
+                    </medi:field>
+                </medi:segment>
+
+                <!--COM-->
+                <medi:segment xmltag="COM" segcode="COM" truncatable="true" minOccurs="0" maxOccurs="9">
+                    <medi:field xmltag="C076" truncatable="true">
+                        <medi:component xmltag="E3148"/>
+                        <medi:component xmltag="E3155"/>
+                    </medi:field>
+                </medi:segment>
+            </medi:segmentGroup>
+        </medi:segmentGroup>
+    </medi:segmentGroup>
+
+    <!--UNT-->
+    <medi:segment xmltag="UNT" segcode="UNT" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="C0074" />
+        <medi:field xmltag="C0062" />
+    </medi:segment>
+
+    <!--UNZ-->
+    <medi:segment xmltag="UNZ" segcode="UNZ" truncatable="true" minOccurs="0" maxOccurs="1">
+        <medi:field xmltag="C0036" />
+        <medi:field xmltag="C0020" />
+    </medi:segment>
+</medi:segments>
+</medi:edimap>
+

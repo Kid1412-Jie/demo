@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--若存在segment="'&amp;#13;&amp;#10;"，请将amp;删除-->
+<!--segmentGroup的xmltag需要与传入的xml循环标签对应-->
+<medi:edimap xmlns:medi="http://www.milyn.org/schema/edi-message-mapping-1.6.xsd">
+    <medi:description name="GENERATE" version="1.0"/>
+    <medi:delimiters segment="'" field="+" component=":" sub-component="'" escape="?"/>
+    <medi:segments xmltag="root">
+        <!--00-->
+        <medi:segment xmltag="S00" segcode="00" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E0001"/>
+            <medi:field xmltag="E0002"/>
+            <medi:field xmltag="E0003"/>
+            <medi:field xmltag="E0004"/>
+            <medi:field xmltag="E0005"/>
+            <medi:field xmltag="E0006"/>
+            <medi:field xmltag="E0007"/>
+            <medi:field xmltag="E0008"/>
+        </medi:segment>
+
+        <!--11-->
+        <medi:segment xmltag="S11" segcode="11" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1101"/>
+            <medi:field xmltag="E1102"/>
+            <medi:field xmltag="E1103"/>
+            <medi:field xmltag="E1104"/>
+            <medi:field xmltag="E1105"/>
+            <medi:field xmltag="E1106"/>
+            <medi:field xmltag="E1107"/>
+            <medi:field xmltag="E1108"/>
+            <medi:field xmltag="E1109"/>
+            <medi:field xmltag="E1110"/>
+        </medi:segment>
+
+        <!--12-->
+        <medi:segment xmltag="S12" segcode="12" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1201"/>
+            <medi:field xmltag="E1202"/>
+        </medi:segment>
+
+        <!--13-->
+        <medi:segment xmltag="S13" segcode="13" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1301"/>
+            <medi:field xmltag="E1302"/>
+            <medi:field xmltag="E1303"/>
+            <medi:field xmltag="E1304"/>
+            <medi:field xmltag="E1305"/>
+            <medi:field xmltag="E1306"/>
+            <medi:field xmltag="E1307"/>
+            <medi:field xmltag="E1308"/>
+        </medi:segment>
+
+        <!--14-->
+        <medi:segment xmltag="S14" segcode="14" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1401"/>
+            <medi:field xmltag="E1402"/>
+            <medi:field xmltag="E1403"/>
+            <medi:field xmltag="E1404"/>
+            <medi:field xmltag="E1405"/>
+            <medi:field xmltag="E1406"/>
+            <medi:field xmltag="E1407"/>
+            <medi:field xmltag="E1408"/>
+            <medi:field xmltag="E1409"/>
+            <medi:field xmltag="E1410"/>
+            <medi:field xmltag="E1411"/>
+            <medi:field xmltag="E1412"/>
+            <medi:field xmltag="E1413"/>
+            <medi:field xmltag="E1414"/>
+            <medi:field xmltag="E1415"/>
+        </medi:segment>
+
+        <!--group_1-->
+        <medi:segmentGroup xmltag="group_1" minOccurs="0" maxOccurs="-1">
+            <!--15-->
+            <medi:segment xmltag="S15" segcode="15" truncatable="true" minOccurs="0">
+                <medi:field xmltag="E1501"/>
+                <medi:field xmltag="E1502"/>
+                <medi:field xmltag="E1503"/>
+                <medi:field xmltag="E1504"/>
+                <medi:field xmltag="E1505"/>
+                <medi:field xmltag="E1506"/>
+                <medi:field xmltag="E1507"/>
+                <medi:field xmltag="E1508"/>
+                <medi:field xmltag="E1509"/>
+                <medi:field xmltag="E1510"/>
+            </medi:segment>
+        </medi:segmentGroup>
+
+        <!--17-->
+        <medi:segment xmltag="S17" segcode="17" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1701"/>
+        </medi:segment>
+
+        <!--18-->
+        <medi:segment xmltag="S18" segcode="18" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E1801"/>
+            <medi:field xmltag="E1802"/>
+            <medi:field xmltag="E1803"/>
+        </medi:segment>
+
+        <!--20-->
+        <medi:segment xmltag="S20" segcode="20" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E2001"/>
+            <medi:field xmltag="E2002"/>
+            <medi:field xmltag="E2003"/>
+            <medi:field xmltag="E2004"/>
+            <medi:field xmltag="E2005"/>
+            <medi:field xmltag="E2006"/>
+            <medi:field xmltag="E2007"/>
+            <medi:field xmltag="E2008"/>
+            <medi:field xmltag="E2009"/>
+        </medi:segment>
+
+        <!--21-->
+        <medi:segment xmltag="S21" segcode="21" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E2101"/>
+            <medi:field xmltag="E2102"/>
+            <medi:field xmltag="E2103"/>
+            <medi:field xmltag="E2104"/>
+            <medi:field xmltag="E2105"/>
+            <medi:field xmltag="E2106"/>
+        </medi:segment>
+
+        <!--30-->
+        <medi:segment xmltag="S30" segcode="30" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E3001"/>
+            <medi:field xmltag="E3002"/>
+            <medi:field xmltag="E3003"/>
+            <medi:field xmltag="E3004"/>
+            <medi:field xmltag="E3005"/>
+            <medi:field xmltag="E3006"/>
+        </medi:segment>
+
+        <!--31-->
+        <medi:segment xmltag="S31" segcode="31" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E3101"/>
+            <medi:field xmltag="E3102"/>
+            <medi:field xmltag="E3103"/>
+            <medi:field xmltag="E3104"/>
+            <medi:field xmltag="E3105"/>
+            <medi:field xmltag="E3106"/>
+        </medi:segment>
+
+        <!--32-->
+        <medi:segment xmltag="S32" segcode="32" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E3201"/>
+            <medi:field xmltag="E3202"/>
+            <medi:field xmltag="E3203"/>
+            <medi:field xmltag="E3204"/>
+            <medi:field xmltag="E3205"/>
+            <medi:field xmltag="E3206"/>
+        </medi:segment>
+
+        <!--33-->
+        <medi:segment xmltag="S33" segcode="33" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E3301"/>
+            <medi:field xmltag="E3302"/>
+            <medi:field xmltag="E3303"/>
+            <medi:field xmltag="E3304"/>
+            <medi:field xmltag="E3305"/>
+            <medi:field xmltag="E3306"/>
+        </medi:segment>
+
+        <!--group_2-->
+        <medi:segmentGroup xmltag="group_2" minOccurs="0" maxOccurs="-1">
+            <!--41-->
+            <medi:segment xmltag="S41" segcode="41" truncatable="true" minOccurs="0">
+                <medi:field xmltag="E4101"/>
+                <medi:field xmltag="E4102"/>
+                <medi:field xmltag="E4103"/>
+                <medi:field xmltag="E4104"/>
+                <medi:field xmltag="E4105"/>
+                <medi:field xmltag="E4106"/>
+                <medi:field xmltag="E4107"/>
+                <medi:field xmltag="E4108"/>
+            </medi:segment>
+
+            <!--43-->
+            <medi:segment xmltag="S43" segcode="43" truncatable="true" minOccurs="0">
+                <medi:field xmltag="E4301" truncatable="true">
+                    <medi:component xmltag="F430101"/>
+                    <medi:component xmltag="F430102"/>
+                    <medi:component xmltag="F430103"/>
+                    <medi:component xmltag="F430104"/>
+                    <medi:component xmltag="F430105"/>
+                    <medi:component xmltag="F430106"/>
+                    <medi:component xmltag="F430107"/>
+                    <medi:component xmltag="F430108"/>
+                    <medi:component xmltag="F430109"/>
+                </medi:field>
+                <medi:field xmltag="E4302" truncatable="true">
+                    <medi:component xmltag="F430201"/>
+                    <medi:component xmltag="F430202"/>
+                    <medi:component xmltag="F430203"/>
+                    <medi:component xmltag="F430204"/>
+                </medi:field>
+                <medi:field xmltag="E4303" truncatable="true">
+                    <medi:component xmltag="F430301"/>
+                    <medi:component xmltag="F430302"/>
+                    <medi:component xmltag="F430303"/>
+                    <medi:component xmltag="F430304"/>
+                    <medi:component xmltag="F430305"/>
+                </medi:field>
+            </medi:segment>
+
+            <!--group_3-->
+            <medi:segmentGroup xmltag="group_3" minOccurs="0" maxOccurs="-1">
+                <!--44-->
+                <medi:segment xmltag="S44" segcode="44" truncatable="true" minOccurs="0">
+                    <medi:field xmltag="E4401"/>
+                </medi:segment>
+            </medi:segmentGroup>
+
+            <!--47-->
+            <medi:segment xmltag="S47" segcode="47" truncatable="true" minOccurs="0">
+                <medi:field xmltag="E4701"/>
+                <medi:field xmltag="E4702"/>
+            </medi:segment>
+
+            <!--group_4-->
+            <medi:segmentGroup xmltag="group_4" minOccurs="0" maxOccurs="-1">
+                <!--51-->
+                <medi:segment xmltag="S51" segcode="51" truncatable="true" minOccurs="0">
+                    <medi:field xmltag="E5101"/>
+                    <medi:field xmltag="E5102"/>
+                    <medi:field xmltag="E5103"/>
+                    <medi:field xmltag="E5104"/>
+                    <medi:field xmltag="E5105"/>
+                    <medi:field xmltag="E5106"/>
+                </medi:segment>
+            </medi:segmentGroup>
+        </medi:segmentGroup>
+
+        <!--group_5-->
+        <medi:segmentGroup xmltag="group_5" minOccurs="0" maxOccurs="-1">
+            <!--52-->
+            <medi:segment xmltag="S52" segcode="52" truncatable="true" minOccurs="0">
+                <medi:field xmltag="E5201"/>
+                <medi:field xmltag="E5202"/>
+                <medi:field xmltag="E5203"/>
+                <medi:field xmltag="E5204"/>
+            </medi:segment>
+        </medi:segmentGroup>
+
+        <!--99-->
+        <medi:segment xmltag="S99" segcode="99" truncatable="true" minOccurs="0">
+            <medi:field xmltag="E9901"/>
+        </medi:segment>
+    </medi:segments>
+</medi:edimap>
+

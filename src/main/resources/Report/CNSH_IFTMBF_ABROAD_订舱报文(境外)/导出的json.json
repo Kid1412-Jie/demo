@@ -1,0 +1,288 @@
+{
+        "ediBody": {
+                "group_5": [
+                        {
+                        },
+                        {
+
+                ],{
+                                "ediBody": {
+                                        "fileDescription": "2",
+                                        "placeOfReceipt": "91",
+                                        "consigneeEmail": "105",
+                                        "shipper": "94",
+                                        "preVoyage": "89",
+                                        "blNo": "30",
+                                        "group_5": [
+                                                {
+                                                        "containerSoc": "217",
+                                                        "efId": "218",
+                                                        "ctnNumbers": "216",
+                                                        "ctnSizeType": "215"
+                                                },
+                                                {
+                                                        "containerSoc": "221",
+                                                        "efId": "222",
+                                                        "ctnNumbers": "220",
+                                                        "ctnSizeType": "219"
+                                                }
+                                        ],
+                                        "chargeType": "18",
+                                        "finalDestination": "28",
+                                        "freightTerms": "20",
+                                        "receiverCode": "5",
+                                        "requestedShipmentDate": "85",
+                                        "group_1": [
+                                                {
+                                                        "frChCode": "44",
+                                                        "frChRemark": "45",
+                                                        "codeOfPayableAt": "47",
+                                                        "amount": "53",
+                                                        "prepaidOrCollect": "46",
+                                                        "quantity": "49",
+                                                        "rateOfFrCh": "51",
+                                                        "payableAt": "48",
+                                                        "currency": "50",
+                                                        "unitOfQuantity": "52"
+                                                },
+                                                {
+                                                        "frChCode": "54",
+                                                        "frChRemark": "55",
+                                                        "codeOfPayableAt": "57",
+                                                        "amount": "63",
+                                                        "prepaidOrCollect": "56",
+                                                        "quantity": "59",
+                                                        "rateOfFrCh": "61",
+                                                        "payableAt": "58",
+                                                        "currency": "60",
+                                                        "unitOfQuantity": "62"
+                                                },
+                                                {
+                                                        "frChCode": "64",
+                                                        "frChRemark": "65",
+                                                        "codeOfPayableAt": "67",
+                                                        "amount": "73",
+                                                        "prepaidOrCollect": "66",
+                                                        "quantity": "69",
+                                                        "rateOfFrCh": "71",
+                                                        "payableAt": "68",
+                                                        "currency": "70",
+                                                        "unitOfQuantity": "72"
+                                                }
+                                        ],
+                                        "issuePartyCode": "9",
+                                        "group_2": [
+                                                {
+                                                        "maxTemperature": "138",
+                                                        "cargoNetWeight": "124",
+                                                        "codeOfPkgs": "121",
+                                                        "overWidthLeft": "141",
+                                                        "overHeight": "143",
+                                                        "temperatureSetting": "136",
+                                                        "cargoCode": "147",
+                                                        "group_4": [
+                                                                {
+                                                                        "containerSoc": "154",
+                                                                        "cargoNetWeight": "152",
+                                                                        "ctnNo": "149",
+                                                                        "cargoTareWeight": "153",
+                                                                        "ctnNumbersOfPackages": "151",
+                                                                        "ctnSizeType": "150"
+                                                                },
+                                                                {
+                                                                        "containerSoc": "160",
+                                                                        "cargoNetWeight": "158",
+                                                                        "ctnNo": "155",
+                                                                        "cargoTareWeight": "159",
+                                                                        "ctnNumbersOfPackages": "157",
+                                                                        "ctnSizeType": "156"
+                                                                },
+                                                                {
+                                                                        "containerSoc": "166",
+                                                                        "cargoNetWeight": "164",
+                                                                        "ctnNo": "161",
+                                                                        "cargoTareWeight": "165",
+                                                                        "ctnNumbersOfPackages": "163",
+                                                                        "ctnSizeType": "162"
+                                                                }
+                                                        ],
+                                                        "cargoMeasurement": "125",
+                                                        "overLengthFront": "139",
+                                                        "cargoDescription": "148",
+                                                        "group_3": [
+                                                                {
+                                                                        "marks": "144"
+                                                                },
+                                                                {
+                                                                        "marks": "145"
+                                                                },
+                                                                {
+                                                                        "marks": "146"
+                                                                }
+                                                        ],
+                                                        "MPT": "133",
+                                                        "overWidthRight": "142",
+                                                        "minTemperature": "137",
+                                                        "undgNo": "128",
+                                                        "overLengthBack": "140",
+                                                        "cargoSequenceNo": "118",
+                                                        "class": "126",
+                                                        "emergencyContact": "134",
+                                                        "label": "129",
+                                                        "mfagNo": "132",
+                                                        "packages": "122",
+                                                        "cargoGross": "123",
+                                                        "emsNo": "131",
+                                                        "cargoId": "119",
+                                                        "flashPoint": "130",
+                                                        "numbersOfPkgs": "120",
+                                                        "page": "127",
+                                                        "temperatureId": "135"
+                                                },
+                                                {
+                                                        "maxTemperature": "186",
+                                                        "cargoNetWeight": "173",
+                                                        "codeOfPkgs": "170",
+                                                        "overWidthLeft": "189",
+                                                        "overHeight": "191",
+                                                        "temperatureSetting": "184",
+                                                        "cargoCode": "195",
+                                                        "group_4": [
+                                                                {
+                                                                        "containerSoc": "202",
+                                                                        "cargoNetWeight": "200",
+                                                                        "ctnNo": "197",
+                                                                        "cargoTareWeight": "201",
+                                                                        "ctnNumbersOfPackages": "199",
+                                                                        "ctnSizeType": "198"
+                                                                },
+                                                                {
+                                                                        "containerSoc": "208",
+                                                                        "cargoNetWeight": "206",
+                                                                        "ctnNo": "203",
+                                                                        "cargoTareWeight": "207",
+                                                                        "ctnNumbersOfPackages": "205",
+                                                                        "ctnSizeType": "204"
+                                                                },
+                                                                {
+                                                                        "containerSoc": "214",
+                                                                        "cargoNetWeight": "212",
+                                                                        "ctnNo": "209",
+                                                                        "cargoTareWeight": "213",
+                                                                        "ctnNumbersOfPackages": "211",
+                                                                        "ctnSizeType": "210"
+                                                                }
+                                                        ],
+                                                        "cargoMeasurement": "174",
+                                                        "overLengthFront": "187",
+                                                        "cargoDescription": "196",
+                                                        "group_3": [
+                                                                {
+                                                                        "marks": "192"
+                                                                },
+                                                                {
+                                                                        "marks": "193"
+                                                                },
+                                                                {
+                                                                        "marks": "194"
+                                                                }
+                                                        ],
+                                                        "MPT": "182",
+                                                        "overWidthRight": "190",
+                                                        "minTemperature": "185",
+                                                        "undgNo": "177",
+                                                        "overLengthBack": "188",
+                                                        "cargoSequenceNo": "167",
+                                                        "class": "175",
+                                                        "label": "178",
+                                                        "mfagNo": "181",
+                                                        "packages": "171",
+                                                        "cargoGross": "172",
+                                                        "emsNo": "180",
+                                                        "cargoId": "168",
+                                                        "flashPoint": "179",
+                                                        "numbersOfPkgs": "169",
+                                                        "page": "176",
+                                                        "temperatureId": "183"
+                                                }
+                                        ],
+                                        "preVesselCode": "87",
+                                        "messageType": "1",
+                                        "vessel": "79",
+                                        "tel": "76",
+                                        "vesselCode": "78",
+                                        "shipperEmail": "98",
+                                        "recordTotalOfFile": "223",
+                                        "issueParty": "10",
+                                        "notifyContact": "109",
+                                        "placeOfDeliveryCode": "25",
+                                        "payAt": "37",
+                                        "consignee": "101",
+                                        "consigneeAddr": "102",
+                                        "deliveryTerm": "31",
+                                        "forwarderCode": "112",
+                                        "preVessel": "88",
+                                        "tradeCode": "83",
+                                        "finalDestinationCode": "27",
+                                        "numbersOfOriginalBl": "35",
+                                        "senderCode": "4",
+                                        "placeOfBlIssueCode": "32",
+                                        "dischargePort": "24",
+                                        "voyage": "80",
+                                        "frTermsCode": "19",
+                                        "siRefNo": "43",
+                                        "forwarderEmail": "117",
+                                        "fileCreateTime": "6",
+                                        "name": "75",
+                                        "forwarder": "113",
+                                        "shipperTel": "97",
+                                        "consigneeCode": "99",
+                                        "blTranshipId": "15",
+                                        "codeOfPayAt": "36",
+                                        "quarantineCode": "17",
+                                        "forwarderTel": "116",
+                                        "bookingNo": "29",
+                                        "bookingAgent": "40",
+                                        "refNo": "42",
+                                        "note": "74",
+                                        "placeOfReceiptCode": "90",
+                                        "senderPortCode": "7",
+                                        "notifyTel": "110",
+                                        "fileFunction": "3",
+                                        "notify": "107",
+                                        "shipperCode": "93",
+                                        "expiryDate": "12",
+                                        "ioId": "38",
+                                        "placeOfBlIssue": "33",
+                                        "placeOfDelivery": "26",
+                                        "shipperAddr": "95",
+                                        "currency": "13",
+                                        "shipmentDate": "11",
+                                        "forwarderAddr": "114",
+                                        "notifyAddr": "108",
+                                        "email": "77",
+                                        "notifyCode": "106",
+                                        "dischargePortCode": "23",
+                                        "shipperContact": "96",
+                                        "consigneeTel": "104",
+                                        "consigneeContact": "103",
+                                        "dateOfIssue": "34",
+                                        "receiverPortCode": "8",
+                                        "arrivalShipmentDate": "86",
+                                        "shippingLineCode": "81",
+                                        "loadPortCode": "21",
+                                        "trade": "84",
+                                        "forwarderContact": "115",
+                                        "hds": "39",
+                                        "loadPort": "22",
+                                        "dateOfReceipt": "92",
+                                        "modeOfStuffing": "16",
+                                        "notifyEmail": "111",
+                                        "cargoAmount": "14",
+                                        "shippingLine": "82",
+                                        "contactNo": "41"
+                                }
+                        },
+                "recordTotalOfFile": "223",
+        }
+}

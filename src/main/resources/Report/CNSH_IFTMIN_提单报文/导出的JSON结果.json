@@ -1,0 +1,533 @@
+{
+  "ediBody": {
+    "messageReferenceNumberUNH": "780430001",
+    "interchangeControlReferenceUNZ": "78043",
+    "group_8": [
+      {
+        "carrierIdentificationTDT": "COSU",
+        "codeListIdentificationCodeTDTC222": "L",
+        "group_9": [
+          {
+            "codeListResponsibleAgencyCodeLOC": "6",
+            "codeListIdentificationCodeLOC": null,
+            "locationNameCodeLOC": "SGSIN",
+            "locationFunctionCodeQualifierLOC": "9",
+            "locationNameLOC": "SINGAPORE"
+          },
+          {
+            "codeListResponsibleAgencyCodeLOC": "6",
+            "codeListIdentificationCodeLOC": null,
+            "locationNameCodeLOC": "USLAX",
+            "locationFunctionCodeQualifierLOC": "11",
+            "locationNameLOC": "LOS ANGELES"
+          },
+          {
+            "codeListResponsibleAgencyCodeLOC": "6",
+            "codeListIdentificationCodeLOC": null,
+            "locationNameCodeLOC": "THLCH",
+            "locationFunctionCodeQualifierLOC": "88",
+            "locationNameLOC": "LAEM CHABANG"
+          },
+          {
+            "codeListResponsibleAgencyCodeLOC": "6",
+            "codeListIdentificationCodeLOC": null,
+            "locationNameCodeLOC": "USCHI",
+            "locationFunctionCodeQualifierLOC": "7",
+            "locationNameLOC": "CHICAGO"
+          }
+        ],
+        "transportMeansIdentificationNameTDT": "CMA VESSEL",
+        "codeListIdentificationCodeTDTC040": "172",
+        "transportMeansIdentificationNameIdentifierTDT": "9235074",
+        "transitDirectionIndicatorCodeTDT": null,
+        "codeListResponsibleAgencyCodeTDT": null,
+        "transportModeNameCodeTDT": "1",
+        "transportMeansTDT": null,
+        "excessTransportationInformationTDT": null,
+        "conveyanceReferenceNumberTDT": "018East",
+        "transportStageCodeQualifierTDT": "20"
+      }
+    ],
+    "dateOfPreparationUNB": "081210",
+    "recipientIdentificationUNB": "CARGOSMART",
+    "group_18": [
+      {
+        "group_20": [
+          {
+            "measurementValueMEA": "471.50",
+            "measurementUnitCodeMEA": "KGM",
+            "measurementAttributeCodeMEA": "WT",
+            "measuredAttributeCodeMEA": "G"
+          },
+          {
+            "measurementValueMEA": "42",
+            "measurementUnitCodeMEA": "CBM",
+            "measurementAttributeCodeMEA": "VOL",
+            "measuredAttributeCodeMEA": "AAW"
+          }
+        ],
+        "group_21": [],
+        "group_32": [],
+        "goodsItemNumberGID": "1",
+        "group_FTX": [
+          {
+            "productIdFunctionQualifierPIA": "5",
+            "itemNumberPIA": "903210",
+            "itemTypeIdentificationCodePIA": "HS"
+          },
+          {
+            "textReference": null,
+            "textFunctionCoded": null,
+            "textSubjectCodeQualifier": "AAA",
+            "freeTextValue": "ELECTRICAL APPLIANCE PARTS, NOS"
+          },
+          {
+            "textReference": null,
+            "textFunctionCoded": null,
+            "textSubjectCodeQualifier": "AAA",
+            "freeTextValue": "HS CODE: 903210"
+          }
+        ],
+        "numberOfPackagesGID": "4",
+        "group_29": [
+          {
+            "group_30": [
+              {
+                "measurementValueMEA": "371.5",
+                "measurementUnitCodeMEA": "KGM",
+                "measurementAttributeCodeMEA": "WT",
+                "measuredAttributeCodeMEA": "G"
+              },
+              {
+                "measurementValueMEA": "40",
+                "measurementUnitCodeMEA": "CBM",
+                "measurementAttributeCodeMEA": "VOL",
+                "measuredAttributeCodeMEA": "AAW"
+              }
+            ],
+            "equipmentIdentificationNumberPCI": "MOFU010462",
+            "numberOfPackagesPCI": "4"
+          },
+          {
+            "group_30": [
+              {
+                "measurementValueMEA": "100",
+                "measurementUnitCodeMEA": "KGM",
+                "measurementAttributeCodeMEA": "WT",
+                "measuredAttributeCodeMEA": "G"
+              },
+              {
+                "measurementValueMEA": "2",
+                "measurementUnitCodeMEA": "CBM",
+                "measurementAttributeCodeMEA": "VOL",
+                "measuredAttributeCodeMEA": "AAW"
+              }
+            ],
+            "equipmentIdentificationNumberPCI": "CAXU432527",
+            "numberOfPackagesPCI": "8"
+          }
+        ],
+        "packageTypeDescriptionCodeGID": "PX",
+        "group_22": [],
+        "group_23": [
+          {
+            "shippingMarksPCI": "CONTAINER NO./ SEAL NO.",
+            "markingInstructionsCodedPCI": null
+          }
+        ]
+      },
+      {
+        "group_20": [
+          {
+            "measurementValueMEA": "200.50",
+            "measurementUnitCodeMEA": "KGM",
+            "measurementAttributeCodeMEA": "WT",
+            "measuredAttributeCodeMEA": "G"
+          },
+          {
+            "measurementValueMEA": "6",
+            "measurementUnitCodeMEA": "CBM",
+            "measurementAttributeCodeMEA": "VOL",
+            "measuredAttributeCodeMEA": "AAW"
+          }
+        ],
+        "group_21": [],
+        "group_32": [],
+        "goodsItemNumberGID": "1",
+        "group_FTX": [
+          {
+            "productIdFunctionQualifierPIA": "5",
+            "itemNumberPIA": "903333",
+            "itemTypeIdentificationCodePIA": "HS"
+          },
+          {
+            "textReference": null,
+            "textFunctionCoded": null,
+            "textSubjectCodeQualifier": "AAA",
+            "freeTextValue": "MACHINE PARTS, NOS"
+          },
+          {
+            "textReference": null,
+            "textFunctionCoded": null,
+            "textSubjectCodeQualifier": "AAA",
+            "freeTextValue": "HS CODE: 903333"
+          }
+        ],
+        "numberOfPackagesGID": "8",
+        "group_29": [
+          {
+            "group_30": [
+              {
+                "measurementValueMEA": "200.50",
+                "measurementUnitCodeMEA": "KGM",
+                "measurementAttributeCodeMEA": "WT",
+                "measuredAttributeCodeMEA": "G"
+              },
+              {
+                "measurementValueMEA": "6",
+                "measurementUnitCodeMEA": "CBM",
+                "measurementAttributeCodeMEA": "VOL",
+                "measuredAttributeCodeMEA": "AAW"
+              }
+            ],
+            "equipmentIdentificationNumberPCI": "CAXU432527",
+            "numberOfPackagesPCI": "8"
+          }
+        ],
+        "packageTypeDescriptionCodeGID": "BX",
+        "group_22": [],
+        "group_23": [
+          {
+            "shippingMarksPCI": "CONTAINER NO./ SEAL NO.",
+            "markingInstructionsCodedPCI": null
+          }
+        ]
+      }
+    ],
+    "group_37": [
+      {
+        "equipmentSupplierCodedEQD": "2",
+        "equipmentSizeAndTypeDescriptionCodeEQD": "22G0",
+        "array_SEL": [
+          {
+            "sealingPartyCodedSEL": "CA",
+            "sealNumberSEL": "03739"
+          }
+        ],
+        "equipmentIdentificationNumberEQD": "MOFU010462",
+        "array_MEA": [
+          {
+            "measurementValueMEA": "371.5",
+            "measurementUnitCodeMEA": "KGM",
+            "measurementAttributeCodeMEA": "WT",
+            "measuredAttributeCodeMEA": "G"
+          },
+          {
+            "measurementValueMEA": "40",
+            "measurementUnitCodeMEA": "CBM",
+            "measurementAttributeCodeMEA": "VOL",
+            "measuredAttributeCodeMEA": "AAW"
+          }
+        ],
+        "temperatureSetting": null,
+        "measurementUnitCode": null,
+        "group_39": [],
+        "array_RFF": [],
+        "equipmentTypeCodeQualifierEQD": "CN",
+        "temperatureQualifier": null
+      },
+      {
+        "equipmentSupplierCodedEQD": "2",
+        "equipmentSizeAndTypeDescriptionCodeEQD": "22G0",
+        "array_SEL": [
+          {
+            "sealingPartyCodedSEL": "CA",
+            "sealNumberSEL": "03738"
+          }
+        ],
+        "equipmentIdentificationNumberEQD": "CAXU432527",
+        "array_MEA": [
+          {
+            "measurementValueMEA": "300.50",
+            "measurementUnitCodeMEA": "KGM",
+            "measurementAttributeCodeMEA": "WT",
+            "measuredAttributeCodeMEA": "G"
+          },
+          {
+            "measurementValueMEA": "8",
+            "measurementUnitCodeMEA": "CBM",
+            "measurementAttributeCodeMEA": "VOL",
+            "measuredAttributeCodeMEA": "AAW"
+          }
+        ],
+        "temperatureSetting": null,
+        "measurementUnitCode": null,
+        "group_39": [],
+        "array_RFF": [],
+        "equipmentTypeCodeQualifierEQD": "CN",
+        "temperatureQualifier": null
+      }
+    ],
+    "associationAssignedCodeUNH": null,
+    "messageFunctionCodeBGM": "9",
+    "group_6": [
+      {
+        "methodOfPaymentCPI": null,
+        "chargeCategoryCodeCPI": "4",
+        "prepaidCollectIndicatorCodedCPI": "C"
+      }
+    ],
+    "messageTypeVersionNumberUNH": "D",
+    "group_1": [
+      {
+        "array_group_1_LOC": [
+          {
+            "codeListResponsibleAgencyCodeLOC": null,
+            "codeListIdentificationCodeLOC": "145",
+            "locationNameCodeLOC": "USNYC",
+            "locationFunctionCodeQualifierLOC": "57",
+            "locationNameLOC": "NEW YORK"
+          }
+        ],
+        "array_group_1_DTM": []
+      },
+      {
+        "array_group_1_LOC": [
+          {
+            "codeListResponsibleAgencyCodeLOC": null,
+            "codeListIdentificationCodeLOC": "145",
+            "locationNameCodeLOC": "USNYC",
+            "locationFunctionCodeQualifierLOC": "73",
+            "locationNameLOC": "NEW YORK"
+          }
+        ],
+        "array_group_1_DTM": [
+          {
+            "dateTimePeriodValueDTM": "20150313",
+            "dateTimePeriodFunctionCodeQualifierDTM": "95",
+            "dateTimePeriodFormatCodeDTM": "102"
+          }
+        ]
+      }
+    ],
+    "group_3": [
+      {
+        "referenceFunctionCodeQualifierRFF": "BN",
+        "referenceIdentifierRFF": "387590403A"
+      },
+      {
+        "referenceFunctionCodeQualifierRFF": "SI",
+        "referenceIdentifierRFF": "2009921360"
+      }
+    ],
+    "group_11": [
+      {
+        "partyNameNAD": null,
+        "partyFunctionCodeQualifierNAD": "CA",
+        "cityNameNAD": null,
+        "countryNameCodeNAD": null,
+        "postalIdentificationCodeNAD": null,
+        "group_15": [],
+        "group_13": [],
+        "group_12": [],
+        "countrySubEntityNameCodeNAD": null,
+        "nameAndAddressNAD": null,
+        "partyIdentifierNAD": "COSU",
+        "partyIdentifierNAD3": "86",
+        "partyIdentifierNAD2": "160"
+      },
+      {
+        "partyNameNAD": "SHIPPER COMPANY NAME",
+        "partyFunctionCodeQualifierNAD": "SH",
+        "cityNameNAD": null,
+        "countryNameCodeNAD": null,
+        "postalIdentificationCodeNAD": null,
+        "group_15": [],
+        "group_13": [
+          {
+            "numberOfCopiesOfDocumentRequiredDOC": "3",
+            "documentMessageNumberDOC": null,
+            "documentStatusCodeDOC": "26",
+            "communicationMediumTypeCodeDOC": "EM",
+            "documentNameCodeDOC": "707"
+          }
+        ],
+        "group_12": [],
+        "countrySubEntityNameCodeNAD": null,
+        "array_street": [
+          {
+            "streetAndNumberPoBoxNAD": "SHIPPING COMPANY ADDRESS LINE1"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "SHIPPING COMPANY ADDRESS LINE2"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "partyIdentifierNAD": null,
+        "partyIdentifierNAD3": null,
+        "partyIdentifierNAD2": null
+      },
+      {
+        "partyNameNAD": "FORWARDER COMPANY NAME",
+        "partyFunctionCodeQualifierNAD": "FW",
+        "cityNameNAD": null,
+        "countryNameCodeNAD": null,
+        "postalIdentificationCodeNAD": null,
+        "group_15": [],
+        "group_13": [],
+        "group_12": [],
+        "countrySubEntityNameCodeNAD": null,
+        "array_street": [
+          {
+            "streetAndNumberPoBoxNAD": "FORWARDER COMPANY ADDRESS LINE1"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "FORWARDER COMPANY ADDRESS LINE2"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "partyIdentifierNAD": null,
+        "partyIdentifierNAD3": null,
+        "partyIdentifierNAD2": null
+      },
+      {
+        "partyNameNAD": "CONSIGNEE COMPANY NAME",
+        "partyFunctionCodeQualifierNAD": "CN",
+        "cityNameNAD": null,
+        "countryNameCodeNAD": null,
+        "postalIdentificationCodeNAD": null,
+        "group_15": [],
+        "group_13": [
+          {
+            "numberOfCopiesOfDocumentRequiredDOC": "3",
+            "documentMessageNumberDOC": null,
+            "documentStatusCodeDOC": "26",
+            "communicationMediumTypeCodeDOC": "EM",
+            "documentNameCodeDOC": "705"
+          }
+        ],
+        "group_12": [],
+        "countrySubEntityNameCodeNAD": null,
+        "array_street": [
+          {
+            "streetAndNumberPoBoxNAD": "CONSIGNEE COMPANY ADDRESS LINE1"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "CONSIGNEE COMPANY ADDRESS LINE2"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "partyIdentifierNAD": null,
+        "partyIdentifierNAD3": null,
+        "partyIdentifierNAD2": null
+      },
+      {
+        "partyNameNAD": "SI SUBMITTER COMPANY NAME",
+        "partyFunctionCodeQualifierNAD": "SI",
+        "cityNameNAD": null,
+        "countryNameCodeNAD": null,
+        "postalIdentificationCodeNAD": null,
+        "group_15": [],
+        "group_13": [],
+        "group_12": [
+          {
+            "departmentOrEmployeeIdentificationCTA": null,
+            "contactFunctionCodeCTA": "IC",
+            "array_group_12_COM": [
+              {
+                "communicationNumberCodeQualifierCOM": "TE",
+                "communicationNumberCOM": "86-121-522153251"
+              },
+              {
+                "communicationNumberCodeQualifierCOM": "EM",
+                "communicationNumberCOM": "jamesy@si_requestor.com"
+              }
+            ],
+            "departmentOrEmployeeCTA": "JAMES YU"
+          }
+        ],
+        "countrySubEntityNameCodeNAD": null,
+        "array_street": [
+          {
+            "streetAndNumberPoBoxNAD": "REQUEST COMPANY ADDRESS LINE1"
+          },
+          {
+            "streetAndNumberPoBoxNAD": "REQUEST COMPANY ADDRESS LINE2"
+          }
+        ],
+        "nameAndAddressNAD": null,
+        "partyIdentifierNAD": "OFFICECODE",
+        "partyIdentifierNAD3": null,
+        "partyIdentifierNAD2": null
+      }
+    ],
+    "messageTypeReleaseNumberUNH": "99B",
+    "documentNameCodeBGM": "340",
+    "messageReferenceNumberUNT": "780430001",
+    "messageTypeIdentifierUNH": "IFTMIN",
+    "interchangeControlCountUNZ": "1",
+    "syntaxIdentifierUNB": "UNOC",
+    "0113UNH": null,
+    "contractAndCarriageConditionCodeTSR": "30",
+    "senderIdentificationUNB": "YOURID",
+    "interchangeControlReferenceUNB2": null,
+    "numberOfSegmentsInAMessageUNT": "62",
+    "interchangeControlReferenceUNB3": "IFTMIN",
+    "commonAccessReferenceUNH": null,
+    "interchangeControlReferenceUNB": "78043",
+    "array_FTX": [
+      {
+        "textFunctionCodedFTX": null,
+        "textSubjectCodeQualifierFTX": "AAS",
+        "array_freeTextValue": [
+          {
+            "freeTextValueFTX": "Freight Collect"
+          }
+        ],
+        "freeTextValueCodeFTX": null
+      },
+      {
+        "textFunctionCodedFTX": null,
+        "textSubjectCodeQualifierFTX": "BLC",
+        "array_freeTextValue": [
+          {
+            "freeTextValueFTX": "THIS SHIPMENT CONTAINS NO WOOD PACKAGE MATERIAL IN CONTAINER"
+          }
+        ],
+        "freeTextValueCodeFTX": null
+      }
+    ],
+    "serviceRequirementCodeTSR": "3",
+    "partnerIdentificationCodeQualifierUNBS002": "01",
+    "timeOfPreparationUNB": "0856",
+    "sequenceMessageTransferNumberUNH": null,
+    "array_CNT": [
+      {
+        "controlTotalTypeCodeQualifierCNT": "7",
+        "measurementUnitCodeCNT": "KGM",
+        "controlValueCNT": "671.5"
+      },
+      {
+        "controlTotalTypeCodeQualifierCNT": "11",
+        "measurementUnitCodeCNT": null,
+        "controlValueCNT": "500"
+      },
+      {
+        "controlTotalTypeCodeQualifierCNT": "15",
+        "measurementUnitCodeCNT": "CBM",
+        "controlValueCNT": "48"
+      },
+      {
+        "controlTotalTypeCodeQualifierCNT": "16",
+        "measurementUnitCodeCNT": null,
+        "controlValueCNT": "2"
+      }
+    ],
+    "partnerIdentificationCodeQualifierUNBS003": "01",
+    "syntaxVersionNumberUNB": "2",
+    "documentMessageNumberBGM": "2009921360",
+    "controllingAgencyUNH": "UN",
+    "0110UNH": null,
+    "firstLastSequenceMessageTransferIndicationUNH": null
+  }
+}
