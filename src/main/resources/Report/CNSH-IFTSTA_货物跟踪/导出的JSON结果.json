@@ -1,0 +1,243 @@
+{
+  "ediBody": {
+    "messageReferenceNumberUNH": "10425500001",
+    "interchangeControlReferenceUNZ": "104255",
+    "dateOfPreparationUNB": "181005",
+    "recipientIdentificationUNB": "YOURID",
+    "group_4": [
+      {
+        "group_5": [
+          {
+            "statusCategoryCodedSTS": "1",
+            "group_RFF": [
+              {
+                "referenceFunctionCodeQualifierRFF": "BM",
+                "referenceIdentifierRFF": "4045743320"
+              },
+              {
+                "referenceFunctionCodeQualifierRFF": "BN",
+                "referenceIdentifierRFF": "4045743320"
+              }
+            ],
+            "group_DTM": [
+              {
+                "dateTimePeriodValueDTM": "201810050728",
+                "dateTimePeriodFunctionCodeQualifierDTM": "334",
+                "dateTimePeriodFormatCodeDTM": "203"
+              }
+            ],
+            "codeListResponsibleAgencyCodeLOC": "6",
+            "group_8": [
+              {
+                "equipmentSupplierCodedEQD": null,
+                "equipmentSizeAndTypeDescriptionCodeEQD": "42G1",
+                "array_SEL": [
+                  {
+                    "sealingPartyCodedSEL": "CA",
+                    "sealNumberSEL": "00129452"
+                  }
+                ],
+                "equipmentIdentificationNumberEQD": "COSU7993684",
+                "equipmentStatusCodeEQD": null,
+                "equipmentTypeCodeQualifierEQD": "CN",
+                "fullEmptyIndicatorCodedEQD": "4"
+              }
+            ],
+            "codeListIdentificationCodeLOC": "139",
+            "statusDescriptionCodeSTS": "RD",
+            "locationNameCodeLOC": "CNXIP",
+            "group_6": [
+              {
+                "transitDirectionIndicatorCodeTDT": null,
+                "codeListResponsibleAgencyCodeTDT": null,
+                "transportModeNameCodeTDT": "1",
+                "codeListIdentificationCodeTDT": "L",
+                "transportMeansTDT": null,
+                "carrierIdentificationTDT": "COSU",
+                "excessTransportationInformationTDT": null,
+                "conveyanceReferenceNumberTDT": "087North",
+                "transportMeansIdentificationNameTDT": "THETIS D",
+                "transportStageCodeQualifierTDT": "20",
+                "group_7": [
+                  {
+                    "array_DTM": [],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "229",
+                    "locationNameCodeLOC": "CNTXG",
+                    "locationFunctionCodeQualifierLOC": "7",
+                    "locationNameLOC": "Xingang"
+                  },
+                  {
+                    "array_DTM": [
+                      {
+                        "dateTimePeriodValueDTM": "201808111857",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "133",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      },
+                      {
+                        "dateTimePeriodValueDTM": "201808111857",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "186",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      }
+                    ],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "139",
+                    "locationNameCodeLOC": "SEGVX",
+                    "locationFunctionCodeQualifierLOC": "9",
+                    "locationNameLOC": "Gaevle"
+                  },
+                  {
+                    "array_DTM": [
+                      {
+                        "dateTimePeriodValueDTM": "201808150815",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "132",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      },
+                      {
+                        "dateTimePeriodValueDTM": "201808150827",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "178",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      }
+                    ],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "139",
+                    "locationNameCodeLOC": "DEHAM",
+                    "locationFunctionCodeQualifierLOC": "11",
+                    "locationNameLOC": "Hamburg"
+                  },
+                  {
+                    "array_DTM": [],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "229",
+                    "locationNameCodeLOC": "SEGVX",
+                    "locationFunctionCodeQualifierLOC": "88",
+                    "locationNameLOC": "Gaevle"
+                  }
+                ],
+                "transportMeansIdentificationNameIdentifierTDT": "9372274"
+              },
+              {
+                "transitDirectionIndicatorCodeTDT": null,
+                "codeListResponsibleAgencyCodeTDT": null,
+                "transportModeNameCodeTDT": "1",
+                "codeListIdentificationCodeTDT": "L",
+                "transportMeansTDT": null,
+                "carrierIdentificationTDT": "COSU",
+                "excessTransportationInformationTDT": null,
+                "conveyanceReferenceNumberTDT": "002East",
+                "transportMeansIdentificationNameTDT": "COSCO SHIPPING LEO",
+                "transportStageCodeQualifierTDT": "20",
+                "group_7": [
+                  {
+                    "array_DTM": [],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "229",
+                    "locationNameCodeLOC": "CNTXG",
+                    "locationFunctionCodeQualifierLOC": "7",
+                    "locationNameLOC": "Xingang"
+                  },
+                  {
+                    "array_DTM": [
+                      {
+                        "dateTimePeriodValueDTM": "201808190459",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "133",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      },
+                      {
+                        "dateTimePeriodValueDTM": "201808190459",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "186",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      }
+                    ],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "139",
+                    "locationNameCodeLOC": "DEHAM",
+                    "locationFunctionCodeQualifierLOC": "9",
+                    "locationNameLOC": "Hamburg"
+                  },
+                  {
+                    "array_DTM": [
+                      {
+                        "dateTimePeriodValueDTM": "201809221100",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "132",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      },
+                      {
+                        "dateTimePeriodValueDTM": "201809221149",
+                        "dateTimePeriodFunctionCodeQualifierDTM": "178",
+                        "dateTimePeriodFormatCodeDTM": "203"
+                      }
+                    ],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "139",
+                    "locationNameCodeLOC": "CNTXG",
+                    "locationFunctionCodeQualifierLOC": "11",
+                    "locationNameLOC": "Xingang"
+                  },
+                  {
+                    "array_DTM": [],
+                    "codeListResponsibleAgencyCodeLOC": "6",
+                    "codeListIdentificationCodeLOC": "229",
+                    "locationNameCodeLOC": "SEGVX",
+                    "locationFunctionCodeQualifierLOC": "88",
+                    "locationNameLOC": "Gaevle"
+                  }
+                ],
+                "transportMeansIdentificationNameIdentifierTDT": "9783502"
+              }
+            ],
+            "locationFunctionCodeQualifierLOC": "175",
+            "group_NAD": [
+              {
+                "partyFunctionCodeQualifierNAD": "CZ",
+                "partyIdentifierNAD": "6691999001"
+              },
+              {
+                "partyFunctionCodeQualifierNAD": "FW",
+                "partyIdentifierNAD": "GEOGSEGOT"
+              },
+              {
+                "partyFunctionCodeQualifierNAD": "N1",
+                "partyIdentifierNAD": "7186586000"
+              },
+              {
+                "partyFunctionCodeQualifierNAD": "CZ",
+                "partyIdentifierNAD": "6875015000"
+              },
+              {
+                "partyFunctionCodeQualifierNAD": "CN",
+                "partyIdentifierNAD": "7186586000"
+              },
+              {
+                "partyFunctionCodeQualifierNAD": "CA",
+                "partyIdentifierNAD": "COSU"
+              }
+            ],
+            "locationNameLOC": "XXXX International Logistics Transportation Co., Ltd"
+          }
+        ],
+        "consolidationItemNumberCNI": "1"
+      }
+    ],
+    "messageTypeIdentifierBGM": "20181005081607",
+    "dateTimePeriodFunctionCodeQualifierDTM": "137",
+    "messageTypeVersionNumberUNH": "D",
+    "messageTypeReleaseNumberUNH": "99B",
+    "messageReferenceNumberUNT": "10425500001",
+    "messageTypeIdentifierUNH": "IFTSTA",
+    "messageReferenceNumberBGM": "23",
+    "interchangeControlCountUNZ": "1",
+    "syntaxIdentifierUNB": "UNOC",
+    "senderIdentificationUNB": "CARGOSMART",
+    "numberOfSegmentsInAMessageUNT": "36",
+    "messageTypeVersionNumberBGM": "9",
+    "dateTimePeriodFormatCodeDTM": "203",
+    "interchangeControlReferenceUNB": "104255",
+    "partnerIdentificationCodeQualifierUNBS002": "01",
+    "timeOfPreparationUNB": "0816",
+    "partnerIdentificationCodeQualifierUNBS003": "01",
+    "dateTimePeriodValueDTM": "201810050816",
+    "syntaxVersionNumberUNB": "3",
+    "controllingAgencyUNH": "UN"
+  }
+}

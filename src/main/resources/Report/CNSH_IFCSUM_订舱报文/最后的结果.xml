@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+                      xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+    <jb:bean beanId="ediData" class="org.apache.commons.collections4.map.HashedMap" createOnElement="/root">
+        <jb:wiring property="ediHead" beanIdRef="ediHead"/>
+        <jb:wiring property="ediBody" beanIdRef="mainBody"/>
+    </jb:bean>
+
+    <jb:bean beanId="mainBody" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring property="S000" beanIdRef="S000"/>
+        <jb:wiring property="G10" beanIdRef="array_group_10"/>
+        <jb:wiring property="S099" beanIdRef="S099"/>
+    </jb:bean>
+
+    <!-- 节点S00 -->
+    <jb:bean beanId="S000" class="java.util.HashMap" createOnElement="/root">
+        <jb:value property="RECORD_ID" default="00" decoder="Integer" data="#"/>
+        <jb:value property="MESSAGE_TYPE" default="" decoder="String" data="#/S000/E0001"/>
+        <jb:value property="FILE_DESCRIPTION" default="" decoder="String" data="#/S000/E0002"/>
+        <jb:value property="FILE_FUNCTION" default="" decoder="String" data="#/S000/E0003"/>
+        <jb:value property="SENDER_CODE" default="" decoder="String" data="#/S000/E0004"/>
+        <jb:value property="RECEIVER_CODE" default="" decoder="String" data="#/S000/E0005"/>
+        <jb:value property="FILE_CREATE_TIME" default="" decoder="String" data="#/S000/E0006"/>
+    </jb:bean>
+
+    <!--组合G10-->
+    <jb:bean beanId="array_group_10" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring beanIdRef="S010"/>
+        <jb:wiring beanIdRef="S011"/>
+        <jb:wiring beanIdRef="S012"/>
+        <jb:wiring beanIdRef="S013"/>
+        <jb:wiring beanIdRef="S014"/>
+        <jb:wiring property="G15" beanIdRef="array_group_15"/>
+        <jb:wiring beanIdRef="S016"/>
+        <jb:wiring beanIdRef="S017"/>
+        <jb:wiring beanIdRef="S018"/>
+        <jb:wiring beanIdRef="S019"/>
+        <jb:wiring beanIdRef="S020"/>
+        <jb:wiring beanIdRef="S021"/>
+        <jb:wiring beanIdRef="S031"/>
+        <jb:wiring property="G41" beanIdRef="array_group_41"/>
+        <jb:wiring property="G51" beanIdRef="array_group_51"/>
+        <jb:wiring property="G52" beanIdRef="array_group_52"/>
+    </jb:bean>
+
+    <!-- 集合S010 -->
+    <jb:bean beanId="S010" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S010"/>
+    </jb:bean>
+    <!-- 节点S10 -->
+    <jb:bean beanId="item_S010" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="10" decoder="Long" data="#/G10"/>
+        <jb:value property="VESSEL_CODE" default="" decoder="String" data="#/S010/E1001"/>
+        <jb:value property="VESSEL" default="" decoder="String" data="#/S010/E1002"/>
+        <jb:value property="NATIONALITY_CODE" default="" decoder="String" data="#/S010/E1003"/>
+        <jb:value property="VOYAGE" default="" decoder="String" data="#/S010/E1004"/>
+        <jb:value property="TRADE_CODE" default="" decoder="String" data="#/S010/E1005"/>
+        <jb:value property="TRADE" default="" decoder="String" data="#/S010/E1006"/>
+        <jb:value property="ETD_ARRIVED_DATE" default="" decoder="String" data="#/S010/E1007"/>
+        <jb:value property="SAILING_DATE" default="" decoder="String" data="#/S010/E1008"/>
+        <jb:value property="DEPART_PORT_CODE" default="" decoder="String" data="#/S010/E1009"/>
+        <jb:value property="DEPART_PORT" default="" decoder="String" data="#/S010/E1010"/>
+        <jb:value property="NEXT_CALLING_PORT_CODE" default="" decoder="String" data="#/S010/E1011"/>
+        <jb:value property="NEXT_CALLING_PORT" default="" decoder="String" data="#/S010/E1012"/>
+        <jb:value property="CONTAINER_COUNT" default="" decoder="Long" data="#/S010/E1013"/>
+    </jb:bean>
+
+    <!-- 集合S011 -->
+    <jb:bean beanId="S011" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S011"/>
+    </jb:bean>
+    <!-- 节点S11 -->
+    <jb:bean beanId="item_S011" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="11" decoder="Long" data="#/G10"/>
+        <jb:value property="SHIPPING_LINE_CODE" default="" decoder="String" data="#/S011/E1101"/>
+        <jb:value property="SHIPPING_LINE" default="" decoder="String" data="#/S011/E1102"/>
+    </jb:bean>
+
+    <!-- 集合S012 -->
+    <jb:bean beanId="S012" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S012"/>
+    </jb:bean>
+    <!-- 节点S12 -->
+    <jb:bean beanId="item_S012" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="12" decoder="Long" data="#/G10"/>
+        <jb:value property="BL_NO" default="" decoder="String" data="#/S012/E1201"/>
+        <jb:value property="PRE_VESSEL_CODE" default="" decoder="String" data="#/S012/E1202"/>
+        <jb:value property="PRE_VESSEL" default="" decoder="String" data="#/S012/E1203"/>
+        <jb:value property="PRE_VOYAGE" default="" decoder="String" data="#/S012/E1204"/>
+        <jb:value property="PLACE_CODE_OF_RECEIPT" default="" decoder="String" data="#/S012/E1205"/>
+        <jb:value property="PLACE_OF_RECEIPT" default="" decoder="String" data="#/S012/E1206"/>
+        <jb:value property="LOAD_PORT_CODE" default="" decoder="String" data="#/S012/E1207"/>
+        <jb:value property="LOAD_PORT" default="" decoder="String" data="#/S012/E1208"/>
+        <jb:value property="BL_CY_CFS_ITEM" default="" decoder="String" data="#/S012/E1209"/>
+        <jb:value property="PREPAID_OR_COLLECT" default="" decoder="String" data="#/S012/E1210"/>
+        <jb:value property="LOAD_DATE" default="" decoder="String" data="#/S012/E1211"/>
+        <jb:value property="QUARANTINE_CODING" default="" decoder="String" data="#/S012/E1212"/>
+        <jb:value property="DATE_OF_ISSUE" default="" decoder="String" data="#/S012/E1213"/>
+        <jb:value property="CURRENCY" default="" decoder="String" data="#/S012/E1214"/>
+        <jb:value property="EXCHANGE_RATE" default="" decoder="String" data="#/S012/E1215"/>
+        <jb:value property="Contract_No" default="" decoder="String" data="#/S012/E1216"/>
+        <jb:value property="House_BL" default="" decoder="String" data="#/S012/E1217"/>
+    </jb:bean>
+
+    <!-- 集合S013 -->
+    <jb:bean beanId="S013" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S013"/>
+    </jb:bean>
+    <!-- 节点S13 -->
+    <jb:bean beanId="item_S013" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="13" decoder="Long" data="#/G10"/>
+        <jb:value property="DISCHARGE_PORT_CODE" default="" decoder="String" data="#/S013/E1301"/>
+        <jb:value property="DISCHARGE_PORT" default="" decoder="String" data="#/S013/E1302"/>
+        <jb:value property="PLACE_CODE_OF_DELIVERY" default="" decoder="String" data="#/S013/E1303"/>
+        <jb:value property="PLACE_OF_DELIVERY" default="" decoder="String" data="#/S013/E1304"/>
+        <jb:value property="TRANSFER_PORT_CODE" default="" decoder="String" data="#/S013/E1305"/>
+        <jb:value property="TRANSFER_PORT" default="" decoder="String" data="#/S013/E1306"/>
+        <jb:value property="PLACE_CODE_OF_BL_ISSUE" default="" decoder="String" data="#/S013/E1307"/>
+        <jb:value property="PLACE_OF_BL_ISSUE" default="" decoder="String" data="#/S013/E1308"/>
+        <jb:value property="TRANSFER_FLAG" default="" decoder="String" data="#/S013/E1309"/>
+    </jb:bean>
+
+    <!-- 集合S014 -->
+    <jb:bean beanId="S014" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S014"/>
+    </jb:bean>
+    <!-- 节点S14 -->
+    <jb:bean beanId="item_S014" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="14" decoder="Long" data="#/G10"/>
+        <jb:value property="OPT_DISCH_PORT_1_CODE" default="" decoder="String" data="#/S014/E1401"/>
+        <jb:value property="OPT_DISCH_PORT_1" default="" decoder="String" data="#/S014/E1402"/>
+        <jb:value property="OPT_DISCH_PORT_2_CODE" default="" decoder="String" data="#/S014/E1403"/>
+        <jb:value property="OPT_DISCH_PORT_2" default="" decoder="String" data="#/S014/E1404"/>
+        <jb:value property="OPT_DISCH_PORT_3_CODE" default="" decoder="String" data="#/S014/E1405"/>
+        <jb:value property="OPT_DISCH_PORT_3" default="" decoder="String" data="#/S014/E1406"/>
+        <jb:value property="OPT_DISCH_PORT_4_CODE" default="" decoder="String" data="#/S014/E1407"/>
+        <jb:value property="OPT_DISCH_PORT_4" default="" decoder="String" data="#/S014/E1408"/>
+        <jb:value property="OPT_DISCH_PORT_5_CODE" default="" decoder="String" data="#/S014/E1409"/>
+        <jb:value property="OPT_DISCH_PORT_5" default="" decoder="String" data="#/S014/E1410"/>
+    </jb:bean>
+
+    <!--组合G15-->
+    <jb:bean beanId="array_group_15" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring beanIdRef="S015"/>
+    </jb:bean>
+    <!-- 集合S015 -->
+    <jb:bean beanId="S015" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S015"/>
+    </jb:bean>
+    <!-- 节点S15 -->
+    <jb:bean beanId="item_S015" class="java.util.HashMap" createOnElement="/root/G10/G15">
+        <jb:value property="RECORD_ID" default="15" decoder="Long" data="#/G10/G15"/>
+        <jb:value property="FR_CH_CODE" default="" decoder="String" data="#/S015/E1501"/>
+        <jb:value property="FR_CH_REMARK" default="" decoder="String" data="#/S015/E1502"/>
+        <jb:value property="PAYABLE_AT_CODE" default="" decoder="String" data="#/S015/E1503"/>
+        <jb:value property="PAYABLE_AT" default="" decoder="String" data="#/S015/E1504"/>
+        <jb:value property="QUANTITY" default="" decoder="String" data="#/S015/E1505"/>
+        <jb:value property="CURRENCY" default="" decoder="String" data="#/S015/E1506"/>
+        <jb:value property="RATE_OF_FR_CH" default="" decoder="String" data="#/S015/E1507"/>
+        <jb:value property="UNIT_OF_QUANTITY" default="" decoder="String" data="#/S015/E1508"/>
+        <jb:value property="AMOUNT" default="" decoder="String" data="#/S015/E1509"/>
+        <jb:value property="PREPAID_OR_COLLECT" default="" decoder="String" data="#/S015/E1510"/>
+    </jb:bean>
+
+    <!-- 集合S016 -->
+    <jb:bean beanId="S016" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S016"/>
+    </jb:bean>
+    <!-- 节点S16 -->
+    <jb:bean beanId="item_S016" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="16" decoder="Long" data="#/G10"/>
+        <jb:value property="SHIPPER_CODE" default="" decoder="String" data="#/S016/E1601"/>
+        <jb:value property="SHIPPER_CODE_CUSTOM_CN" default="" decoder="String" data="#/S016/E1602"/>
+        <jb:value property="SHIPPER_AEO_CODE_CN" default="" decoder="String" data="#/S016/E1603"/>
+        <jb:value property="COMMUNICATION_NUMBER_TE_CUSTOM_CN" default="" decoder="String" data="#/S016/E1604"/>
+        <jb:value property="SHIPPER_1" default="" decoder="String" data="#/S016/E1605"/>
+        <jb:value property="SHIPPER_2" default="" decoder="String" data="#/S016/E1606"/>
+        <jb:value property="SHIPPER_3" default="" decoder="String" data="#/S016/E1607"/>
+        <jb:value property="SHIPPER_4" default="" decoder="String" data="#/S016/E1608"/>
+        <jb:value property="SHIPPER_5" default="" decoder="String" data="#/S016/E1609"/>
+        <jb:value property="SHIPPER_6" default="" decoder="String" data="#/S016/E1610"/>
+        <jb:value property="SHIPPER_7" default="" decoder="String" data="#/S016/E1611"/>
+        <jb:value property="SHIPPER_8" default="" decoder="String" data="#/S016/E1612"/>
+    </jb:bean>
+
+    <!-- 集合S017 -->
+    <jb:bean beanId="S017" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S017"/>
+    </jb:bean>
+    <!-- 节点S17 -->
+    <jb:bean beanId="item_S017" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="17" decoder="Long" data="#/G10"/>
+        <jb:value property="CONSIGNEE_CODE" default="" decoder="String" data="#/S017/E1701"/>
+        <jb:value property="CONSIGNEE_CODE_CUSTOM_CN" default="" decoder="String" data="#/S017/E1702"/>
+        <jb:value property="CONSIGNEE_AEO_CODE_CN" default="" decoder="String" data="#/S017/E1703"/>
+        <jb:value property="COMMUNICATION_NUMBER_TE_CUSTOM_CN" default="" decoder="String" data="#/S017/E1704"/>
+        <jb:value property="CONSIGNEE_1" default="" decoder="String" data="#/S017/E1705"/>
+        <jb:value property="CONSIGNEE_2" default="" decoder="String" data="#/S017/E1706"/>
+        <jb:value property="CONSIGNEE_3" default="" decoder="String" data="#/S017/E1707"/>
+        <jb:value property="CONSIGNEE_4" default="" decoder="String" data="#/S017/E1708"/>
+        <jb:value property="CONSIGNEE_5" default="" decoder="String" data="#/S017/E1709"/>
+        <jb:value property="CONSIGNEE_6" default="" decoder="String" data="#/S017/E1710"/>
+        <jb:value property="CONSIGNEE_7" default="" decoder="String" data="#/S017/E1711"/>
+        <jb:value property="CONSIGNEE_8" default="" decoder="String" data="#/S017/E1712"/>
+    </jb:bean>
+
+    <!-- 集合S018 -->
+    <jb:bean beanId="S018" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S018"/>
+    </jb:bean>
+    <!-- 节点S18 -->
+    <jb:bean beanId="item_S018" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="18" decoder="Long" data="#/G10"/>
+        <jb:value property="NOTIFY_1_CODE" default="" decoder="String" data="#/S018/E1801"/>
+        <jb:value property="NOTIFY_CODE_CUSTOM_CN" default="" decoder="String" data="#/S018/E1802"/>
+        <jb:value property="COMMUNICATION_NUMBER_TE_CUSTOM_CN" default="" decoder="String" data="#/S018/E1803"/>
+        <jb:value property="NOTIFY_1" default="" decoder="String" data="#/S018/E1804"/>
+        <jb:value property="NOTIFY_2" default="" decoder="String" data="#/S018/E1805"/>
+        <jb:value property="NOTIFY_3" default="" decoder="String" data="#/S018/E1806"/>
+        <jb:value property="NOTIFY_4" default="" decoder="String" data="#/S018/E1807"/>
+        <jb:value property="NOTIFY_5" default="" decoder="String" data="#/S018/E1808"/>
+        <jb:value property="NOTIFY_6" default="" decoder="String" data="#/S018/E1809"/>
+        <jb:value property="NOTIFY_7" default="" decoder="String" data="#/S018/E1810"/>
+        <jb:value property="NOTIFY_8" default="" decoder="String" data="#/S018/E1811"/>
+        <jb:value property="NOTIFY_9" default="" decoder="String" data="#/S018/E1812"/>
+    </jb:bean>
+
+
+    <!-- 集合S019 -->
+    <jb:bean beanId="S019" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S019"/>
+    </jb:bean>
+    <!-- 节点S19 -->
+    <jb:bean beanId="item_S019" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="19" decoder="Long" data="#/G10"/>
+        <jb:value property="NOTIFY_2_CODE" default="" decoder="String" data="#/S019/E1901"/>
+        <jb:value property="NOTIFY_2_1" default="" decoder="String" data="#/S019/E1902"/>
+        <jb:value property="NOTIFY_2_2" default="" decoder="String" data="#/S019/E1903"/>
+        <jb:value property="NOTIFY_2_3" default="" decoder="String" data="#/S019/E1904"/>
+        <jb:value property="NOTIFY_2_4" default="" decoder="String" data="#/S019/E1905"/>
+        <jb:value property="NOTIFY_2_5" default="" decoder="String" data="#/S019/E1906"/>
+        <jb:value property="NOTIFY_2_6" default="" decoder="String" data="#/S019/E1907"/>
+        <jb:value property="NOTIFY_2_7" default="" decoder="String" data="#/S019/E1908"/>
+    </jb:bean>
+
+    <!-- 集合S020 -->
+    <jb:bean beanId="S020" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S020"/>
+    </jb:bean>
+    <!-- 节点S20 -->
+    <jb:bean beanId="item_S020" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="20" decoder="Long" data="#/G10"/>
+        <jb:value property="NOTIFY_3_CODE" default="" decoder="String" data="#/S020/E2001"/>
+        <jb:value property="NOTIFY_3_1" default="" decoder="String" data="#/S020/E2002"/>
+        <jb:value property="NOTIFY_3_2" default="" decoder="String" data="#/S020/E2003"/>
+        <jb:value property="NOTIFY_3_3" default="" decoder="String" data="#/S020/E2004"/>
+        <jb:value property="NOTIFY_3_4" default="" decoder="String" data="#/S020/E2005"/>
+        <jb:value property="NOTIFY_3_5" default="" decoder="String" data="#/S020/E2006"/>
+        <jb:value property="NOTIFY_3_6" default="" decoder="String" data="#/S020/E2007"/>
+        <jb:value property="NOTIFY_3_7" default="" decoder="String" data="#/S020/E2008"/>
+    </jb:bean>
+
+    <!-- 集合S021 -->
+    <jb:bean beanId="S021" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S021"/>
+    </jb:bean>
+    <!-- 节点S21 -->
+    <jb:bean beanId="item_S021" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="21" decoder="Long" data="#/G10"/>
+        <jb:value property="CONTAINER_HOLDER" default="" decoder="String" data="#/S021/E2101"/>
+        <jb:value property="NOT_USED_1" default="" decoder="String" data="#/S021/E2102"/>
+        <jb:value property="NOT_USED_2" default="" decoder="String" data="#/S021/E2103"/>
+        <jb:value property="NOT_USED_3" default="" decoder="String" data="#/S021/E2104"/>
+        <jb:value property="ORIGIN_CODE" default="" decoder="String" data="#/S021/E2105"/>
+        <jb:value property="PLACE_OF_SHIPMENT" default="" decoder="String" data="#/S021/E2106"/>
+        <jb:value property="SHIPMENT_NO" default="" decoder="String" data="#/S021/E2107"/>
+        <jb:value property="LCL_SIGN" default="" decoder="String" data="#/S021/E2108"/>
+        <jb:value property="MASTER_CONSIGNMENT_NO" default="" decoder="String" data="#/S021/E2109"/>
+    </jb:bean>
+
+    <!-- 集合S031 -->
+    <jb:bean beanId="S031" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S031"/>
+    </jb:bean>
+    <!-- 节点S31 -->
+    <jb:bean beanId="item_S031" class="java.util.HashMap" createOnElement="/root/G10">
+        <jb:value property="RECORD_ID" default="31" decoder="Long" data="#/G10"/>
+        <jb:value property="COMMUNICATION_NUMBER_EM_1" default="" decoder="String" data="#/S031/E3101"/>
+        <jb:value property="COMMUNICATION_NUMBER_FX" default="" decoder="String" data="#/S031/E3102"/>
+        <jb:value property="COMMUNICATION_NUMBER_EM_2" default="" decoder="String" data="#/S031/E3103"/>
+        <jb:value property="COMMUNICATION_NUMBER_FX" default="" decoder="String" data="#/S031/E3104"/>
+        <jb:value property="COMMUNICATION_NUMBER_TE" default="" decoder="String" data="#/S031/E3105"/>
+        <jb:value property="COMMUNICATION_NUMBER_EM_3" default="" decoder="String" data="#/S031/E3106"/>
+    </jb:bean>
+
+    <!--组合G41-->
+    <jb:bean beanId="array_group_41" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring beanIdRef="S041"/>
+        <jb:wiring beanIdRef="S043"/>
+        <jb:wiring beanIdRef="S044"/>
+        <jb:wiring beanIdRef="S047"/>
+    </jb:bean>
+    <!-- 集合S041 -->
+    <jb:bean beanId="S041" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S041"/>
+    </jb:bean>
+    <!-- 节点S041 -->
+    <jb:bean beanId="item_S041" class="java.util.HashMap" createOnElement="/root/G10/G41">
+        <jb:value property="RECORD_ID" default="41" decoder="Long" data="#/G10/G41"/>
+        <jb:value property="CARGO_SEQUENCE_NO" default="" decoder="String" data="#/S041/E4101"/>
+        <jb:value property="CARGO_CODE" default="" decoder="String" data="#/S041/E4102"/>
+        <jb:value property="NUMBERS_OF_PACKAGES" default="" decoder="String" data="#/S041/E4103"/>
+        <jb:value property="PACKAGES_KIND_CODE" default="" decoder="String" data="#/S041/E4104"/>
+        <jb:value property="PACKAGES_KIND" default="" decoder="String" data="#/S041/E4105"/>
+        <jb:value property="CARGO_GROSS_WEIGHT" default="" decoder="String" data="#/S041/E4106"/>
+        <jb:value property="CARGO_NET_WEIGHT" default="" decoder="String" data="#/S041/E4107"/>
+        <jb:value property="CARGO_MEASUREMENT" default="" decoder="String" data="#/S041/E4108"/>
+    </jb:bean>
+
+    <!-- 集合S043 -->
+    <jb:bean beanId="S043" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S043"/>
+    </jb:bean>
+    <!-- 节点S043 -->
+    <jb:bean beanId="item_S043" class="java.util.HashMap" createOnElement="/root/G10/G41">
+        <jb:value property="RECORD_ID" default="43" decoder="Long" data="#/G10/G41"/>
+        <jb:value property="CLASS" default="" decoder="String" data="#/S043/E4301"/>
+        <jb:value property="PAGE" default="" decoder="String" data="#/S043/E4302"/>
+        <jb:value property="UNDG_NO" default="" decoder="String" data="#/S043/E4303"/>
+        <jb:value property="LABEL" default="" decoder="String" data="#/S043/E4304"/>
+        <jb:value property="FLASH_POINT" default="" decoder="String" data="#/S043/E4305"/>
+        <jb:value property="EMS_NO" default="" decoder="String" data="#/S043/E4306"/>
+        <jb:value property="MFAG_NO" default="" decoder="String" data="#/S043/E4307"/>
+        <jb:value property="EMERGENCY_CONTACT" default="" decoder="String" data="#/S043/E4308"/>
+        <jb:value property="TEMPERATURE_ID" default="" decoder="String" data="#/S043/E4309"/>
+        <jb:value property="TEMPERATURE_SETTING" default="" decoder="String" data="#/S043/E4310"/>
+        <jb:value property="MIN_TEMPERATURE" default="" decoder="String" data="#/S043/E4311"/>
+        <jb:value property="MAX_TEMPERATURE" default="" decoder="String" data="#/S043/E4312"/>
+    </jb:bean>
+
+    <!-- 集合S044 -->
+    <jb:bean beanId="S044" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S044"/>
+    </jb:bean>
+    <!-- 节点S044 -->
+    <jb:bean beanId="item_S044" class="java.util.HashMap" createOnElement="/root/G10/G41">
+        <jb:value property="RECORD_ID" default="44" decoder="Long" data="#/G10/G41"/>
+        <jb:value property="MARKS_1" default="" decoder="String" data="#/S044/E4401"/>
+        <jb:value property="MARKS_2" default="" decoder="String" data="#/S044/E4402"/>
+        <jb:value property="MARKS_3" default="" decoder="String" data="#/S044/E4403"/>
+        <jb:value property="MARKS_4" default="" decoder="String" data="#/S044/E4404"/>
+        <jb:value property="MARKS_5" default="" decoder="String" data="#/S044/E4405"/>
+        <jb:value property="MARKS_6" default="" decoder="String" data="#/S044/E4406"/>
+        <jb:value property="MARKS_7" default="" decoder="String" data="#/S044/E4407"/>
+        <jb:value property="MARKS_8" default="" decoder="String" data="#/S044/E4408"/>
+        <jb:value property="MARKS_9" default="" decoder="String" data="#/S044/E4409"/>
+        <jb:value property="MARKS_10" default="" decoder="String" data="#/S044/E4410"/>
+    </jb:bean>
+
+    <!-- 集合S047 -->
+    <jb:bean beanId="S047" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S047"/>
+    </jb:bean>
+    <!-- 节点S047 -->
+    <jb:bean beanId="item_S047" class="java.util.HashMap" createOnElement="/root/G10/G41">
+        <jb:value property="RECORD_ID" default="47" decoder="Long" data="#/G10/G41"/>
+        <jb:value property="CARGO_DESCRIPTION_1" default="" decoder="String" data="#/S047/E4701"/>
+        <jb:value property="CARGO_DESCRIPTION_2" default="" decoder="String" data="#/S047/E4702"/>
+        <jb:value property="CARGO_DESCRIPTION_3" default="" decoder="String" data="#/S047/E4703"/>
+        <jb:value property="CARGO_DESCRIPTION_4" default="" decoder="String" data="#/S047/E4704"/>
+        <jb:value property="CARGO_DESCRIPTION_5" default="" decoder="String" data="#/S047/E4705"/>
+    </jb:bean>
+
+
+    <!--组合G51-->
+    <jb:bean beanId="array_group_51" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring beanIdRef="S051"/>
+    </jb:bean>
+    <!-- 集合S051 -->
+    <jb:bean beanId="S051" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S051"/>
+    </jb:bean>
+    <!-- 节点S51 -->
+    <jb:bean beanId="item_S051" class="java.util.HashMap" createOnElement="/root/G10/G51">
+        <jb:value property="RECORD_ID" default="51" decoder="Long" data="#/G10/G51"/>
+        <jb:value property="CARGO_SEQUENCE_NO" default="" decoder="String" data="#/S051/E5101"/>
+        <jb:value property="CTN_NO" default="" decoder="String" data="#/S051/E5102"/>
+        <jb:value property="SEAL_NO" default="" decoder="String" data="#/S051/E5103"/>
+        <jb:value property="CTN_SIZE_TYPE" default="" decoder="String" data="#/S051/E5104"/>
+        <jb:value property="CTN_STATUS" default="" decoder="String" data="#/S051/E5105"/>
+        <jb:value property="CTN_NUMBERS_OF_PACKAGES" default="" decoder="String" data="#/S051/E5106"/>
+        <jb:value property="NET_WEIGHT" default="" decoder="String" data="#/S051/E5107"/>
+        <jb:value property="TARE_WEIGHT" default="" decoder="String" data="#/S051/E5108"/>
+        <jb:value property="CTN_CARGO_MEASUREMENT" default="" decoder="String" data="#/S051/E5109"/>
+        <jb:value property="OVER_LENGTH_FRONT" default="" decoder="String" data="#/S051/E5110"/>
+        <jb:value property="OVER_LENGTH_BACK" default="" decoder="String" data="#/S051/E5111"/>
+        <jb:value property="OVER_WIDTH_LEFT" default="" decoder="String" data="#/S051/E5112"/>
+        <jb:value property="OVER_WIDTH_RIGHT" default="" decoder="String" data="#/S051/E5113"/>
+        <jb:value property="OVER_HEIGHT" default="" decoder="String" data="#/S051/E5114"/>
+        <jb:value property="STOWAGE_LOCATION" default="" decoder="String" data="#/S051/E5115"/>
+
+    </jb:bean>
+
+
+    <!--组合G52-->
+    <jb:bean beanId="array_group_52" class="java.util.HashMap" createOnElement="/root">
+        <jb:wiring beanIdRef="S052"/>
+    </jb:bean>
+    <!-- 集合S052 -->
+    <jb:bean beanId="S052" class="java.util.ArrayList" createOnElement="/root">
+        <jb:wiring beanIdRef="item_S052"/>
+    </jb:bean>
+    <!-- 节点S52 -->
+    <jb:bean beanId="item_S052" class="java.util.HashMap" createOnElement="/root/G10/G52">
+        <jb:value property="RECORD_ID" default="52" decoder="Long" data="#/G10/G52"/>
+        <jb:value property="RECORD_ID" default="" decoder="String" data="#/S052/E5201"/>
+        <jb:value property="CTN_SIZE" default="" decoder="String" data="#/S052/E5202"/>
+        <jb:value property="SOC" default="" decoder="String" data="#/S052/E5203"/>
+        <jb:value property="VIP_EMP" default="" decoder="String" data="#/S052/E5204"/>
+        <jb:value property="CTN_QUANTITY" default="" decoder="String" data="#/S052/E5205"/>
+    </jb:bean>
+
+
+    <!-- 节点S99 -->
+    <jb:bean beanId="S099" class="java.util.HashMap" createOnElement="/root">
+        <jb:value property="RECORD_ID" default="99" decoder="Long" data="#"/>
+        <jb:value property="RECORD_TOTAL_OF_FILE " default="" decoder="String" data="#/S099/E9901"/>
+    </jb:bean>
+
+</smooks-resource-list>
